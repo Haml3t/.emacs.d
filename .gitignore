@@ -3,3 +3,4 @@ ido.last
 jabber-avatar-cache/*
 jabber-history/*
 auto-save-list/*
+lisp/jabber_config.el
