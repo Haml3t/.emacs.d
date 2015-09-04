@@ -1,4 +1,4 @@
-;http://www.emacswiki.org/emacs/EmacsNiftyTricks
+1;http://www.emacswiki.org/emacs/EmacsNiftyTricks
 
 ;C-x r t STRING <ret> for fill rect w string
 ;C-x (
@@ -12,6 +12,7 @@
 
 ;; keybindings
 (setq lisp-directory (getenv "LISP"))
+(setq hostname (getenv "HOSTNAME"))
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
 (column-number-mode)
@@ -140,13 +141,11 @@ Ignores CHAR at point."
 (setq ido-file-extensions-order '(".org" ".txt" ".tex" ".py" ".emacs" ".xml" ".el" ".ini" ".cfg" ".cnf"))
 
 ;; jabber
-;;(add-to-list 'load-path "/cygdrive/c/cygwin64/home/Haml3t/.emacs.d/lisp")
-
 (add-to-list 'load-path lisp-directory)
 (load "jabber_config.el")
 
 ;; org-mode
-(add-to-list 'load-path (expand-file-name "cygdrive/c/cygwin64/home/Haml3t/org/lisp"))
+(add-to-list 'load-path (expand-file-name "cygdrive/c/cygwin64/home/Haml3t/org/lisp")) ;I dunno what this is supposed to be
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
 (require 'org)
 ;; Standard key bindings
@@ -173,28 +172,28 @@ Ignores CHAR at point."
 	      ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
 ;; capture
 (setq org-directory "/cygdrive/c/cygwin64/home/Haml3t/org")
-(setq org-default-notes-file "/cygdrive/c/cygwin64/home/Haml3t/org/refile.org")
-
+;(setq org-default-notes-file "/cygdrive/c/cygwin64/home/Haml3t/org/refile.org")
+(setq org-default-notes-file (concatenate 'string "/cygdrive/c/cygwin64/home/Haml3t/org/refile_" hostname ".org" ))
 ;; I use C-c c to start capture mode
 (global-set-key (kbd "C-c c") 'org-capture)
 
 ;; Capture templates for: TODO tasks, Notes, appointments, phone calls, meetings, and org-protocol
 (setq org-capture-templates
-      (quote (("t" "TODO" entry (file "refile.org")
+      (quote (("t" "TODO" entry (file (concatenate 'string "refile_" hostname ".org"))
 	       "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-	      ("r" "Respond" entry (file "refile.org")
+	      ("r" "Respond" entry (file (concatenate 'string "refile_" hostname ".org"))
 	       "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
-	      ("n" "Note" entry (file "refile.org")
+	      ("n" "Note" entry (file (concatenate 'string "refile_" hostname ".org"))
 	       "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
 	      ("j" "Journal" entry (file+datetree "diary.org")
 	       "* %?\n%U\n" :clock-in t :clock-resume t)
-	      ("w" "org-protocol" entry (file "refile.org")
+	      ("w" "org-protocol" entry (file (concatenate 'string "refile_" hostname ".org"))
 	       "* TODO Review %c\n%U\n" :immediate-finish t)
-	      ("m" "Meeting" entry (file "refile.org")
+	      ("m" "Meeting" entry (file (concatenate 'string "refile_" hostname ".org"))
 	       "* MEETING with %? :MEETING:\n%U" :clock-in t :clock-resume t)
-	      ("p" "Phone call" entry (file "refile.org")
+	      ("p" "Phone call" entry (file (concatenate 'string "refile_" hostname ".org"))
 	       "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
-	      ("h" "Habit" entry (file "refile.org")
+	      ("h" "Habit" entry (file (concatenate 'string "refile_" hostname ".org"))
 	       "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
 ;; Remove empty LOGBOOK drawers on clock out
 (defun bh/remove-empty-drawer-on-clock-out ()
@@ -237,6 +236,7 @@ Ignores CHAR at point."
 
 (setq org-refile-target-verify-function 'bh/verify-refile-target)
 ;; agenda stuff
+(setq org-agenda-files (quote ("~/org")))
 ;; Do not dim blocked tasks
 (setq org-agenda-dim-blocked-tasks nil)
 
@@ -252,7 +252,7 @@ Ignores CHAR at point."
 	       ((org-agenda-overriding-header "Habits")
 		(org-agenda-sorting-strategy
 		 '(todo-state-down effort-up category-keep))))
-	      ("s" "Agenda"
+	      (" " "Agenda"
 	       ((agenda "" nil)
 		(tags "REFILE"
 		      ((org-agenda-overriding-header "Tasks to Refile")
@@ -372,9 +372,9 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
    (quote
     ("0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
  '(org-agenda-file-regexp "[^.].*\\.org")
- '(org-agenda-files
-   (quote
-    ("/cygdrive/c/cygwin64/home/Haml3t/org/refile.org" "/cygdrive/c/cygwin64/home/Haml3t/org/e-NABLE.org" "/cygdrive/c/cygwin64/home/Haml3t/org/TODO.org")))
+; '(org-agenda-files
+ ;  (quote
+  ;  ("/cygdrive/c/cygwin64/home/Haml3t/org/refile.org" "/cygdrive/c/cygwin64/home/Haml3t/org/e-NABLE.org" "/cygdrive/c/cygwin64/home/Haml3t/org/TODO.org")))
  '(org-journal-dir "~/org/journal")
  '(org-log-into-drawer t)
  '(org-use-property-inheritance t)
