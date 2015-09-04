@@ -11,6 +11,7 @@
 ; (global-set-key '[(f1)] 'call-last-kbd-macro) ;for example
 
 ;; keybindings
+(setq lisp-directory (getenv "LISP"))
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
 (column-number-mode)
@@ -140,6 +141,8 @@ Ignores CHAR at point."
 
 ;; jabber
 (add-to-list 'load-path "/cygdrive/c/cygwin64/home/Haml3t/.emacs.d/lisp")
+
+(add-to-list 'load-path lisp-directory)
 (load "jabber_config.el")
 
 ;; org-mode
