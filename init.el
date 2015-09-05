@@ -125,7 +125,7 @@
 Case is ignored if `case-fold-search' is non-nil in the current buffer.
 Goes backward if ARG is negative; error if CHAR not found.
 Ignores CHAR at point."
- (interactive "p\ncZap up to char: ")
+ (interactive "Zap up to char: ")
  (let ((direction (if (>= arg 0) 1 -1)))
    (kill-region (point)
 		(progn
@@ -235,7 +235,9 @@ Ignores CHAR at point."
   (not (member (nth 2 (org-heading-components)) org-done-keywords)))
 
 (setq org-refile-target-verify-function 'bh/verify-refile-target)
-;; agenda stuff
+
+
+;;;; agenda stuff
 (setq org-agenda-files (quote ("~/org")))
 ;; Do not dim blocked tasks
 (setq org-agenda-dim-blocked-tasks nil)
@@ -316,6 +318,43 @@ Ignores CHAR at point."
 		       (org-agenda-skip-function 'bh/skip-non-archivable-tasks)
 		       (org-tags-match-list-sublevels nil))))
 	       nil))))
+
+(defun bh/org-auto-exclude-function (tag)
+  "Automatic task exclusion in the agenda with / RET"
+  (and (cond
+	((string= tag "hold")
+	 t)
+	((string= tag "farm")
+	 t))
+       (concat "-" tag)))
+
+(setq org-agenda-auto-exclude-function 'bh/org-auto-exclude-function)
+
+; Tags with fast selection keys
+(setq org-tag-alist (quote ((:startgroup)
+			    ("@errand" . ?e)
+			    ("@Muq Manor" . ?M)
+			    ("@205" . ?2)
+			    ("@CCNY" . ?C)
+			    ("@GILGAMESH" . ?G)
+			    (:endgroup)
+			    ("WAITING" . ?w)
+			    ("HOLD" . ?h)
+			    ("e-NABLE" . ?E)
+			    ("School" ?s)
+			    ("SAM" ?S)
+			    ("ORG" . ?O)
+			    ("No Internet" . ?N)
+			    ("NOTE" . ?n)
+			    ("CANCELLED" . ?c)
+			    ("FLAGGED" . ??))))
+
+; Allow setting single tags without the menu
+(setq org-fast-tag-selection-single-key (quote expert))
+
+; For tag searches ignore tasks with scheduled and deadline dates
+; (setq org-agenda-tags-todo-honor-ignore-options t)
+
 ;; some stuff?
 (defun org-summary-todo (n-done n-not-done)
        "Switch entry to DONE when all subentries are done, to TODO otherwise."
