@@ -13,6 +13,7 @@
 ;; keybindings
 (setq lisp-directory (getenv "LISP"))
 (setq hostname (getenv "HOSTNAME"))
+(setq org-env-dir (getenv "ORG"))
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
 (column-number-mode)
@@ -145,7 +146,7 @@ Ignores CHAR at point."
 (load "jabber_config.el")
 
 ;; org-mode
-(add-to-list 'load-path (expand-file-name "cygdrive/c/cygwin64/home/Haml3t/org/lisp")) ;I dunno what this is supposed to be
+; (add-to-list 'load-path (expand-file-name "cygdrive/c/cygwin64/home/Haml3t/org/lisp")) ;I dunno what this is supposed to be
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
 (require 'org)
 ;; Standard key bindings
@@ -171,9 +172,9 @@ Ignores CHAR at point."
 	      ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
 	      ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
 ;; capture
-(setq org-directory "/cygdrive/c/cygwin64/home/Haml3t/org")
+(setq org-directory org-env-dir)
 ;(setq org-default-notes-file "/cygdrive/c/cygwin64/home/Haml3t/org/refile.org")
-(setq org-default-notes-file (concatenate 'string "/cygdrive/c/cygwin64/home/Haml3t/org/refile_" hostname ".org" ))
+(setq org-default-notes-file (concatenate 'string "~/org/refile_" hostname ".org" ))
 ;; I use C-c c to start capture mode
 (global-set-key (kbd "C-c c") 'org-capture)
 
