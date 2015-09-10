@@ -159,7 +159,7 @@ Ignores CHAR at point."
 ;; (setq org-agenda-files '("cygdrive/c/cygwin64/home/Haml3t/org"))
 ;; TODO states
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
+      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d@)")
 	      (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE" "MEETING"))))
 (setq org-use-fast-todo-selection t)
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
@@ -414,7 +414,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(org-agenda-file-regexp "[^.].*\\.org")
  '(org-agenda-files
    (quote
-    ("/home/Haml3t/org/CSC_21200.org" "/home/Haml3t/org/E-Nable.org" "/home/Haml3t/org/E-Nable2.org" "/home/Haml3t/org/GILGAMESH.org" "/home/Haml3t/org/GILGAMESH2.org" "/home/Haml3t/org/GILGAMESH3.org" "/home/Haml3t/org/ME47100.org" "/home/Haml3t/org/ME_47400.org" "/home/Haml3t/org/TODO.org" "/home/Haml3t/org/TODO.org_archive" "/home/Haml3t/org/arch.org" "/home/Haml3t/org/diary.org" "/home/Haml3t/org/harrison.org" "/home/Haml3t/org/janeTODO.org" "/home/Haml3t/org/kinetic.org" "/home/Haml3t/org/kinetic.org_archive" "/home/Haml3t/org/manufacturing.org" "/home/Haml3t/org/notes.org" "/home/Haml3t/org/org-mode-norang.org" "/home/Haml3t/org/org-mode.org" "/home/Haml3t/org/presentation.org" "/home/Haml3t/org/readme.org" "/home/Haml3t/org/refile.org" "/home/Haml3t/org/refile_YGGDRASIL.org")))
+    ("/home/Haml3t/org/CSC_21200.org" "/home/Haml3t/org/E-Nable.org" "/home/Haml3t/org/E-Nable2.org" "/home/Haml3t/org/GILGAMESH.org" "/home/Haml3t/org/GILGAMESH2.org" "/home/Haml3t/org/GILGAMESH3.org" "/home/Haml3t/org/ME47100.org" "/home/Haml3t/org/ME_47400.org" "/home/Haml3t/org/TODO.org" "/home/Haml3t/org/TODO.org_archive" "/home/Haml3t/org/arch.org" "/home/Haml3t/org/diary.org" "/home/Haml3t/org/harrison.org" "/home/Haml3t/org/janeTODO.org" "/home/Haml3t/org/kinetic.org" "/home/Haml3t/org/kinetic.org_archive" "/home/Haml3t/org/manufacturing.org" "/home/Haml3t/org/notes.org" "/home/Haml3t/org/presentation.org" "/home/Haml3t/org/readme.org" "/home/Haml3t/org/refile.org" "/home/Haml3t/org/refile_YGGDRASIL.org")))
  '(org-journal-dir "~/org/journal")
  '(org-log-into-drawer t)
  '(org-use-property-inheritance t)
