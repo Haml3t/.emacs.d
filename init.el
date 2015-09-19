@@ -1,4 +1,4 @@
-1;http://www.emacswiki.org/emacs/EmacsNiftyTricks
+;http://www.emacswiki.org/emacs/EmacsNiftyTricks
 
 ;C-x r t STRING <ret> for fill rect w string
 ;C-x (
@@ -161,7 +161,7 @@ Ignores CHAR at point."
 ;; (setq org-agenda-files '("cygdrive/c/cygwin64/home/Haml3t/org"))
 ;; TODO states
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
+      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d@)")
 	      (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE" "MEETING"))))
 (setq org-use-fast-todo-selection t)
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
@@ -415,6 +415,9 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
     ("0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
  '(org-agenda-file-regexp "[^.].*\\.org")
  '(org-babel-load-languages (quote ((emacs-lisp . t) (C . t))))
+ '(org-agenda-files
+   (quote
+    ("/home/Haml3t/org/CSC_21200.org" "/home/Haml3t/org/E-Nable.org" "/home/Haml3t/org/E-Nable2.org" "/home/Haml3t/org/GILGAMESH.org" "/home/Haml3t/org/GILGAMESH2.org" "/home/Haml3t/org/GILGAMESH3.org" "/home/Haml3t/org/ME47100.org" "/home/Haml3t/org/ME_47400.org" "/home/Haml3t/org/TODO.org" "/home/Haml3t/org/TODO.org_archive" "/home/Haml3t/org/arch.org" "/home/Haml3t/org/diary.org" "/home/Haml3t/org/harrison.org" "/home/Haml3t/org/janeTODO.org" "/home/Haml3t/org/kinetic.org" "/home/Haml3t/org/kinetic.org_archive" "/home/Haml3t/org/manufacturing.org" "/home/Haml3t/org/notes.org" "/home/Haml3t/org/presentation.org" "/home/Haml3t/org/readme.org" "/home/Haml3t/org/refile.org" "/home/Haml3t/org/refile_YGGDRASIL.org")))
  '(org-journal-dir "~/org/journal")
  '(org-log-into-drawer t)
  '(org-use-property-inheritance t)

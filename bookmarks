@@ -4,17 +4,24 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored-marker"
  (filename . "~/org/TODO.org")
- (front-context-string . "** TODO bring Fa")
- (rear-context-string . "ing iron tip]]\n\n")
- (position . 1397))
+ (front-context-string . "** TODO figure o")
+ (rear-context-string . "ed for one week\n")
+ (position . 2492))
 ("org-capture-last-stored"
+<<<<<<< HEAD
  (filename . "~/org/refile_GILGAMESH.org")
  (front-context-string . "* TODO watch [[h")
  (rear-context-string)
  (position . 1))
+=======
+ (filename . "~/org/refile_YGGDRASIL.org")
+ (front-context-string . "* TODO write org")
+ (rear-context-string . "/lbm}-1050(W)]]\n")
+ (position . 43844))
+>>>>>>> f1fed0b9954a6dddf61958bb28cf705c3d5a1da8
 ("org-refile-last-stored"
- (filename . "/cygdrive/c/cygwin64/home/Haml3t/org/TODO.org")
- (front-context-string . "** TODO upgrade ")
- (rear-context-string . "buy Oculus Rift\n")
- (position . 391))
+ (filename . "~/org/TODO.org")
+ (front-context-string . "** TODO figure o")
+ (rear-context-string . "ed for one week\n")
+ (position . 2492))
 )
