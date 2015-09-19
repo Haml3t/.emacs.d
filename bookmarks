@@ -8,10 +8,10 @@
  (rear-context-string . "ing iron tip]]\n\n")
  (position . 1397))
 ("org-capture-last-stored"
- (filename . "/cygdrive/c/cygwin64/home/Haml3t/org/refile_YGGDRASIL.org")
- (front-context-string . "* TODO dubstep\n ")
- (rear-context-string . "upposed to be]]\n")
- (position . 43205))
+ (filename . "~/org/refile_GILGAMESH.org")
+ (front-context-string . "* TODO watch [[h")
+ (rear-context-string)
+ (position . 1))
 ("org-refile-last-stored"
  (filename . "/cygdrive/c/cygwin64/home/Haml3t/org/TODO.org")
  (front-context-string . "** TODO upgrade ")

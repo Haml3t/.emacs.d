@@ -147,6 +147,8 @@ Ignores CHAR at point."
 
 ;; org-mode
 ; (add-to-list 'load-path (expand-file-name "cygdrive/c/cygwin64/home/Haml3t/org/lisp")) ;I dunno what this is supposed to be
+(setq org-src-tab-acts-natively t)
+(setq org-src-fontify-natively t)
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
 (require 'org)
 ;; Standard key bindings
@@ -412,9 +414,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
    (quote
     ("0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
  '(org-agenda-file-regexp "[^.].*\\.org")
-; '(org-agenda-files
- ;  (quote
-  ;  ("/cygdrive/c/cygwin64/home/Haml3t/org/refile.org" "/cygdrive/c/cygwin64/home/Haml3t/org/e-NABLE.org" "/cygdrive/c/cygwin64/home/Haml3t/org/TODO.org")))
+ '(org-babel-load-languages (quote ((emacs-lisp . t) (C . t))))
  '(org-journal-dir "~/org/journal")
  '(org-log-into-drawer t)
  '(org-use-property-inheritance t)
