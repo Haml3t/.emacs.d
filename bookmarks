@@ -3,18 +3,18 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored-marker"
- (filename . "~/org/TODO.org")
- (front-context-string . "** TODO figure o")
- (rear-context-string . "ed for one week\n")
- (position . 2492))
+ (filename . "~/org/CSC_21200.org")
+ (front-context-string . "** TODO Assignme")
+ (rear-context-string . " documentation?\n")
+ (position . 7856))
 ("org-capture-last-stored"
- (filename . "~/org/refile_YGGDRASIL.org")
- (front-context-string . "* TODO write org")
- (rear-context-string . "/lbm}-1050(W)]]\n")
- (position . 43844))
+ (filename . "/cygdrive/c/cygwin64/home/Haml3t/org/refile_YGGDRASIL.org")
+ (front-context-string . "* TODO get CHAPP")
+ (rear-context-string . "9-15 Tue 20:29]\n")
+ (position . 44892))
 ("org-refile-last-stored"
- (filename . "~/org/TODO.org")
- (front-context-string . "** TODO figure o")
- (rear-context-string . "ed for one week\n")
- (position . 2492))
+ (filename . "~/org/readme.org")
+ (front-context-string . "** TODO Resolve ")
+ (rear-context-string . "avid's Org shit\n")
+ (position . 20))
 )
