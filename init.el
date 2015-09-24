@@ -147,6 +147,8 @@ Ignores CHAR at point."
 
 ;; org-mode
 ; (add-to-list 'load-path (expand-file-name "cygdrive/c/cygwin64/home/Haml3t/org/lisp")) ;I dunno what this is supposed to be
+(setq org-src-tab-acts-natively t)
+(setq org-src-fontify-natively t)
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
 (require 'org)
 ;; Standard key bindings
@@ -390,18 +392,6 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 
 					; (org-agenda)
 
-(require 'nnir)
-
-(setq gnus-posting-styles
-      '(((header "to" "lhaml3t@gmail.com")
-	 (address "lhaml3t@gmail.com"))
-	((header "to" "d.m.sugarman@gmail.com")
-	 (address "d.m.sugarman@gmail.com"))
-	((header "cc" "lhaml3t@gmail.com")
-	 (address "lhaml3t@gmail.com"))
-	((header "cc" "d.m.sugarman@gmail.com")
-	 (address "d.m.sugarman@gmail.com"))))
-(setq bbdb/news-auto-create-p t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -411,22 +401,16 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(custom-safe-themes
    (quote
     ("0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
+ '(nil nil t)
  '(org-agenda-file-regexp "[^.].*\\.org")
  '(org-agenda-files
    (quote
     ("/home/Haml3t/org/CSC_21200.org" "/home/Haml3t/org/ME47100.org" "/home/Haml3t/org/ME_47400.org" "/home/Haml3t/org/TODO.org_archive" "/home/Haml3t/org/arch.org" "/home/Haml3t/org/diary.org" "/home/Haml3t/org/harrison.org" "/home/Haml3t/org/kinetic.org" "/home/Haml3t/org/kinetic.org_archive" "/home/Haml3t/org/manufacturing.org" "/home/Haml3t/org/readme.org" "/home/Haml3t/org/refile.org" "/home/Haml3t/org/refile_YGGDRASIL.org")))
+ '(org-babel-load-languages (quote ((emacs-lisp . t) (C . t))))
  '(org-journal-dir "~/org/journal")
  '(org-log-into-drawer t)
  '(org-use-property-inheritance t)
- '(send-mail-function (quote smtpmail-send-it))
- '(smtpmail-smtp-server "smtp.gmail.com")
- '(smtpmail-smtp-service 25))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-agenda-dimmed-todo-face ((t (:foreground "grey50")))))
+ '(send-mail-function (quote smtpmail-send-it)))
 
 (require 'edit-server)
 (edit-server-start)
@@ -441,5 +425,11 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 	  (lambda () (local-set-key (kbd "M-c") 'save-and-compile-latex)))
 
 (setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "lynx")
-
-(setq user-full-name "David Sugarman")
+;; bbdb and gnus
+(load "~/.emacs.d/gnus-conf.el")
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-dimmed-todo-face ((t (:foreground "grey50")))))
