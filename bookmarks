@@ -8,10 +8,10 @@
  (rear-context-string . " documentation?\n")
  (position . 7856))
 ("org-capture-last-stored"
- (filename . "~/org/refile_CHAPPIE.org")
- (front-context-string . "* Donner ganj			")
- (rear-context-string)
- (position . 1))
+ (filename . "/cygdrive/c/cygwin64/home/Haml3t/org/refile_YGGDRASIL.org")
+ (front-context-string . "* G37 H19H					")
+ (rear-context-string . "9-18 Fri 16:42]\n")
+ (position . 45141))
 ("org-refile-last-stored"
  (filename . "~/org/readme.org")
  (front-context-string . "** TODO Resolve ")
