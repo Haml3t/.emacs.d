@@ -1,0 +1,98 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/" . "david/")
+ ("/etc/netctl/" . "examples/")
+ ("/etc/" . "netctl/")
+ ("/usr/share/" . "applications/")
+ ("/usr/" . "share/")
+ ("/" . "etc/")
+ ("/home/david/code/Data_Structures/" . "Oct 6/")
+ ("/home/david/code/" . "Data_Structures/")
+ ("/home/david/School/Data_Structures/" . "Classes/")
+ ("/home/david/School/" . "Data_Structures/")
+ ("/home/david/" . "exwhat/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/david/"
+ "/home/david/exwhat/"
+ "/home/david/.emacs.d/"
+ "/home/david/org/"
+ "/etc/netctl/"
+ "/etc/netctl/examples/"
+ "/etc/wpa_supplicant/"
+ "/home/david/code/Data_Structures/Oct 6/"
+ "/home/david/Downloads/"
+ "/home/david/code/pixelate_image/"
+ "/home/david/School/Data_Structures/Classes/"
+ "/home/david/School/Aero/HW3/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".xinitrc"
+ "init.el"
+ "refile_YGGDRASIL.org"
+ "eduroam"
+ "CSC_21200.org"
+ "ME47100.org"
+ "wpa_supplicant.conf"
+ "main.cpp"
+ "Point.h"
+ "Point.cpp"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/david/exwhat/" (22051 51650 250111 52000) "xelb/" "init.el" "exwm/" "./" "../")
+
+ ("/home/david/.emacs.d/" (22049 18213 913348 400000) ".gitignore" "elpa/" "init.el" "ac-comphist.dat" "bookmarks" "gnus-conf.el" "ido.last" "./" "notes" ".git/" "org-clock-save.el" "lisp/" "jabber-history/" "jabber-avatar-cache/" "auto-save-list/" "../")
+
+ ("/home/david/" (22051 51462 860103 678000) ".cabal/" ".pki/" ".bash_logout" ".gnupg/" ".xfce4-session.verbose-log.last" ".xbindkeysrc.scm" ".java/" ".lesshst" ".bash_profile" ".xbindkeysrc" "#.bashrc#" ".ICEauthority" "org/" "Desktop/" ".cache/" ".xinitrc" ".dbus/" ".thumbnails/" ".local/" ".bash_history" ".mozilla/" "Documents/" "code/" ".subversion/" "./" ".saves/" "Downloads/" ".matlab/" ".elementary/" ".#.bashrc" ".xfce4-session.verbose-log" ".emacs.d/" "exwhat/" ".config/" "School/" ".ghc/" ".gnome/" ".Xmodmap" ".gitconfig" ".bashrc" ".Xauthority" "../")
+
+ ("/home/david/org/" (22051 51416 820101 866000) "harrison.org" "refile_YGGDRASIL.org" "refile.org" "ME47100.org" "journal20150601" "journal20150618" "TODO3.org" "arch.org" "CSC_21200.org" "3DP_layout_optimizer.tex" "somedayMaybe.org" "Org Mode - Organize Your Life In Plain Text!.html" "journal20150619" "orgguide.pdf" "coil_gun_prelim.pdf" "org-mode.el" "emacs-w32.exe.stackdump" "ALL_HAND_EVERYTHING.html" "manufacturing.org" "Makerbots.pdf" "ltxpng/" "Org Mode - Organize Your Life In Plain Text!_files/" "./" "3DP_layout_optimizer.org" "David_Sugarman_KINETIC_Report.html" "David_Sugarman_KINETIC_Report.pdf" "TODO.org_archive" "journal20150526" ".git/" "readme.org" "ME_47400.org" "refile_GILGAMESH.org" "kinetic.org_archive" "082515_meeting_Lindsay_Siegel_Zahn.pdf" "Makerbots.html" "journal/" "org.pdf" "refile_CHAPPIE.org" "diary.org" "3DP_layout_optimizer.html" "E-Nable.org" "kinetic.org" "../")
+
+ ("/etc/netctl/" (22047 52209 626810 943000) "wlp3s0-ccny-wifi" "wlp3s0-NETGEAR51-5G_5GEXT" "wlp3s0-motley" "eduroam" "wlp3s0-SUGARKAHN-2.4G16" "wlp3s0-SUGARKAHN-5G" "./" "wlp3s0-Zahn Center @Marshak" "wlp3s0-lasers" "wlp3s0-lasers 2.4" "interfaces/" "wlp3s0-ccny-guest" "wlp3s0-SUGARKAHN-5G16" "examples/" "hooks/" "../")
+
+ ("/home/david/School/Data_Structures/" (22047 46423 926350 418000) "Oct 1/" "Oct_15/" "./" "../")
+
+ ("/home/david/School/Data_Structures/Oct_15/" (22047 47625 849731 46000) "PointerTest.cpp" "a.out" "./" "../")
+
+ ("/home/david/Downloads/" (22039 52016 936671 482000) "words2.apkg" "102313_2209_BestBuy100G1.jpg" "thermistortables_attempt1.h" "HW2 (1).pdf" "CCNY Homework Assignment #3 9-15-15.docx" "CCNY Powerpoint Lecture 3 9-16-15.pptx" "words.apkg" "./" "thermistortables.h" "HW2.pdf" "matlab/" "assignment1.pdf" "METALSucks20Podcast20Ep0118-5.mp3" "12050684_10206853573552272_1581401947_o.jpg" "bashrc" "12050993_10206852065114562_2080532380_o.jpg" "thermistortables (1).h" "../")
+
+ ("/home/david/School/" (22038 37492 246678 630000) "Advanced Mechanics of Materials and Applied Elasticity.pdf" "Aero/" "./" "Data_Structures/" "../")
+
+ ("/etc/netctl/examples/" (22045 2927 506406 676000) "ethernet-custom" "bonding" "vlan-static" "wireless-open" "eduroam-umu" "ethernet-dhcp" "eduroam" "mobile_ppp" "openvswitch" "ethernet-static" "./" "macvlan-dhcp" "pppoe" "tuntap" "vlan-dhcp" "wireless-wpa-configsection" "wireless-wpa" "tunnel" "macvlan-static" "wireless-wep" "wireless-wpa-static" "wireless-wpa-config" "bridge" "../")
+
+ ("/etc/" (22045 2927 553073 342000) "profile" "default/" "ssl/" "dhcpcd.duid" "polkit-1/" "acpi/" "gshadow" "hostname" "adjtime" "group-" "locale.conf" "passwd-" "rpc" "shadow" "ImageMagick-6/" "skel/" "papersize" "pacman.conf" "crypttab" "healthd.conf" "arch-release" "mdadm.conf" "iptables/" "mtab" "libpaper.d/" "binfmt.d/" "man_db.conf" "hosts" "os-release" "cups/" "request-key.conf" "pango/" "conf.d/" "bash.bash_logout" "resolv.conf" "host.conf" ".updated" "netconfig" "logrotate.conf" "fonts/" "gai.conf" "request-key.d/" "sensors.d/" "login.defs" "texmf/" "avahi/" "gshadow-" "./" "kernel/" "systemd/" "sudoers" "environment" "inputrc" "ca-certificates/" "pm/" "mkinitcpio.conf" "UPower/" "dhcpcd.conf" "sysctl.d/" "gtk-3.0/" "gconf/" "locale.gen" "openldap/" "motd" "securetty" "bash.bashrc" "services" "profile.d/" "libnl/" "grub.d/" "ld.so.cache" "mkinitcpio.d/" "depmod.d/" "logrotate.d/" "fstab" "passwd" "drirc" "iproute2/" "pam.d/" "shells" "xinetd.d/" "lvm/" "udevil/" "resolvconf.conf" "mke2fs.conf" "speech-dispatcher/" "lsb-release" "pacman.d/" "netctl/" "initcpio/" "X11/" "ld.so.conf.d/" "pkcs11/" "xdg/" "pulse/" ".pwd.lock" "security/" "group" "dbus-1/" "modules-load.d/" "sensors3.conf" "makepkg.conf" "tmpfiles.d/" "krb5.conf" "udev/" "sudoers.d/" "protocols" "ifplugd/" "gtk-2.0/" "wpa_supplicant/" "udisks2/" "machine-id" "resolv.conf.bak" "nsswitch.conf" "modprobe.d/" "ld.so.conf" "mail.rc" "at-spi2/" "issue" "nscd.conf" "localtime" "pcmcia/" "shadow-" "../" "nanorc")
+
+ ("/etc/wpa_supplicant/" (21824 57791 0 0) "./" "wpa_supplicant.conf" "../")
+
+ ("/usr/share/applications/" (22036 27986 33334 681000) "globaltime.desktop" "polkit-gnome-authentication-agent-1.desktop" "bvnc.desktop" "linguist-qt4.desktop" "evince-previewer.desktop" "xfce-settings-manager.desktop" "xfce-wm-settings.desktop" "xfce4-appfinder.desktop" "xfce4-screenshooter.desktop" "xfce4-taskmanager.desktop" "exo-mail-reader.desktop" "xfcalendar.desktop" "Thunar-folder-handler.desktop" "gtk3-demo.desktop" "avahi-discover.desktop" "chromium.desktop" "xfce4-accessibility-settings.desktop" "mimeinfo.cache" "exo-preferred-applications.desktop" "xfce-ui-settings.desktop" "xfburn.desktop" "xfce4-notes.desktop" "Thunar-bulk-rename.desktop" "ristretto.desktop" "xfce4-clipman.desktop" "exo-web-browser.desktop" "xfce-backdrop-settings.desktop" "panel-desktop-handler.desktop" "thunar-settings.desktop" "mousepad.desktop" "qdbusviewer-qt4.desktop" "./" "xfce4-mixer.desktop" "anki.desktop" "xfce4-notifyd-config.desktop" "xfce4-mime-settings.desktop" "xfce-wmtweaks-settings.desktop" "evince.desktop" "exo-terminal-emulator.desktop" "thunar-volman-settings.desktop" "xfce-keyboard-settings.desktop" "xfce4-about.desktop" "xfce-session-settings.desktop" "gtk3-icon-browser.desktop" "panel-preferences.desktop" "xfce4-sensors.desktop" "xfce4-run.desktop" "xfce4-terminal.desktop" "xfce-xfcalendar-settings.desktop" "xfce4-settings-editor.desktop" "designer-qt4.desktop" "Thunar.desktop" "xfce4-session-logout.desktop" "gtk3-widget-factory.desktop" "qtconfig-qt4.desktop" "exo-file-manager.desktop" "bssh.desktop" "xfce-workspaces-settings.desktop" "assistant-qt4.desktop" "xfce4-power-manager-settings.desktop" "xfce4-dict.desktop" "gdmap.desktop" "emacs.desktop" "xfce-mouse-settings.desktop" "../" "xfce-display-settings.desktop")
+
+ ("/usr/share/" (22036 27985 856668 13000) "xfce4/" "gitk/" "bash-completion/" "gnome-control-center/" "pacman/" "zoneinfo/" "polkit-1/" "iana-etc/" "bison/" "file/" "desktop-directories/" "wayland/" "cmake/" "xml/" "sounds/" "guile/" "terminfo/" "mkinitcpio/" "gitweb/" "git-core/" "ImageMagick-6/" "tabset/" "Thunar/" "pixmaps/" "xfwm4/" "libthai/" "common-lisp/" "evince/" "qt4/" "gnome/" "themes/" "awk/" "alsa/" "texinfo/" "doc/" "colord/" "xfburn/" "mime/" "gettext/" "gnupg/" "kbd/" "man/" "i18n/" "groff/" "help/" "licenses/" "texmf-dist/" "gst-plugins-base/" "automake-1.15/" "aclocal-1.15/" "xfce4-mixer/" "gdmap/" "fonts/" "sip/" "makepkg-template/" "dict/" "locale/" "avahi/" "git-gui/" "xcb/" "appdata/" "glib-2.0/" "./" "perl5/" "backgrounds/" "xsessions/" "systemd/" "factory/" "ca-certificates/" "gtk-3.0/" "gtksourceview-2.0/" "gir-1.0/" "aclocal/" "color/" "emacs/" "icons/" "vala/" "libtool/" "vim/" "xfce4-notes-plugin/" "readline/" "m17n/" "info/" "tlpkg/" "t1lib/" "icu/" "speech-dispatcher/" "p11-kit/" "nano/" "zsh/" "X11/" "thumbnailers/" "misc/" "dbus-1/" "sgml/" "autoconf/" "ghostscript/" "hwdata/" "ss/" "keyutils/" "djvu/" "tc/" "pkgconfig/" "gtk-2.0/" "gtk-doc/" "imlib2/" "cracklib/" "os-prober/" "orage/" "vte/" "et/" "grub/" "gdb/" "gcc-5.2.0/" "anki/" "pygtk/" "applications/" "libgnome-desktop-3.0/" "../" "GConf/" "git/")
+
+ ("/usr/" (22004 35681 12708 785000) "local/" "sbin/" "bin/" "src/" "./" "share/" "include/" "lib/" "lib64/" "../")
+
+ ("/home/" (22005 44687 163140 442000) "david/" "./" "../")
+
+ ("/home/david/code/Data_Structures/Oct 6/" (22035 58677 0 0) "main.cpp" "./" "Point.h" "Point.cpp" "../")
+
+ ("/home/david/code/Data_Structures/" (22037 14096 723347 466000) "HW5/" "Oct 1/" "./" "Oct 6/" "../")
+
+ ("/home/david/code/" (22037 14051 603347 314000) "pylock.py" "pixelate_image/" "xpyb-git/" "./" ".git/" "Data_Structures/" "xpyb/" "../")
+
+ ("/home/david/Documents/" (22036 28043 996668 210000) "Anki/" "./" "../")
+
+ ("/home/david/School/Aero/HW3/" (22027 5641 280039 294000) "bam2l.m" "HW3.log" "_region_.log" "_region_.prv/" "HW3.out" "_region_.tex" "HW3.aux" "hw3.m" "./" "HW3.pdf" "_region_.pdf" "HW3.tex" "../")
+
+ ("/home/david/code/pixelate_image/" (22029 64914 123341 791000) "Main.hs" ".gitignore" "README.org" "./" ".git/" "dist/" "Setup.hs" "pix.cabal" "../")
+
+ ("/home/david/School/Data_Structures/Classes/" (22029 13317 730002 62000) "main.cpp" "./" "Point.h" "Point.cpp" "../")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
