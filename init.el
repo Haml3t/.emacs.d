@@ -387,8 +387,8 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 ;;   'auto-mode-alist
 ;;   '("\\.m$" . matlab-mode))
 
-;; (server-start)
-;; (setq server-name "emacs-server")
+(server-start)
+(setq server-name "emacs-server")
 
 					; (org-agenda)
 
