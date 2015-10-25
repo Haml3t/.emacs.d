@@ -8,10 +8,6 @@
  (rear-context-string . " $30 from Katie\n")
  (position . 411))
 ("org-capture-last-stored"
- (filename . "~/org/refile_YGGDRASIL.org")
- (front-context-string)
- (rear-context-string . "0-24 Sat 21:50]\n")
- (position . 1750))
 ("org-refile-last-stored"
  (filename . "~/org/TODO.org")
  (front-context-string . "** TODO give Jus")

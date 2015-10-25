@@ -241,7 +241,7 @@ Ignores CHAR at point."
 
 
 ;;;; agenda stuff
-(setq org-agenda-files (list "~/org"))
+(setq org-agenda-files (quote ("~/org")))
 ;; Do not dim blocked tasks
 (setq org-agenda-dim-blocked-tasks nil)
 
@@ -336,19 +336,18 @@ Ignores CHAR at point."
 ; Tags with fast selection keys
 (setq org-tag-alist (quote ((:startgroup)
 			    ("@errand" . ?e)
-			    ("@MuqManor" . ?M)
+			    ("@Muq Manor" . ?M)
 			    ("@205" . ?2)
 			    ("@CCNY" . ?C)
-			    ("@x220" . ?x)
+			    ("@GILGAMESH" . ?G)
 			    (:endgroup)
 			    ("WAITING" . ?w)
 			    ("HOLD" . ?h)
 			    ("e-NABLE" . ?E)
 			    ("School" . ?s)
-			    ("@YGGDRASIL" . ?y)
 			    ("SAM" . ?S)
 			    ("ORG" . ?O)
-			    ("NoInternet" . ?N)
+			    ("No Internet" . ?N)
 			    ("NOTE" . ?n)
 			    ("CANCELLED" . ?c)
 			    ("FLAGGED" . ??))))
@@ -389,7 +388,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 ;;   '("\\.m$" . matlab-mode))
 
 (server-start)
-(setq server-name "emacs-server")
+;; (setq server-name "emacs-server")
 
 					; (org-agenda)
 
@@ -403,15 +402,13 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
    (quote
     ("0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
  '(nil nil t)
+ '(org-agenda-file-regexp "[^.].*\\.org")
+ '(org-agenda-files
+   (quote
+    ("/home/Haml3t/org/CSC_21200.org" "/home/Haml3t/org/ME47100.org" "/home/Haml3t/org/ME_47400.org" "/home/Haml3t/org/TODO.org_archive" "/home/Haml3t/org/arch.org" "/home/Haml3t/org/diary.org" "/home/Haml3t/org/harrison.org" "/home/Haml3t/org/kinetic.org" "/home/Haml3t/org/kinetic.org_archive" "/home/Haml3t/org/manufacturing.org" "/home/Haml3t/org/readme.org" "/home/Haml3t/org/refile.org" "/home/Haml3t/org/refile_YGGDRASIL.org")))
  '(org-babel-load-languages (quote ((emacs-lisp . t) (C . t))))
  '(org-journal-dir "~/org/journal")
  '(org-log-into-drawer t)
- '(org-stuck-projects
-   (quote
-    ("+TODO=\"TODO\"/-somedayMaybe-DONE"
-     ("NEXT" "NEXTACTION")
-     ("somedayMaybe")
-     "")))
  '(org-use-property-inheritance t)
  '(send-mail-function (quote smtpmail-send-it)))
 
