@@ -1,2 +1,2 @@
-;; org-persist.el - YGGDRASIL at <2015-10-27 Tue 02:39>
-(setq stored-clock-history '(("/home/Haml3t/org/TODO.org" . 3043) ("/home/Haml3t/org/ME57200.org_archive" . 353) ("/home/Haml3t/org/refile_YGGDRASIL.org_archive" . 86) ("/home/Haml3t/org/TODO.org" . 4250) ("/home/Haml3t/org/TODO.org" . 2084)))
+;; org-persist.el - Admin-PC at <2015-10-28 Wed 14:02>
+(setq stored-clock-history '(("/home/Haml3t/org/TODO.org" . 3247) ("/home/Haml3t/org/ME57200.org_archive" . 353) ("/home/Haml3t/org/refile_YGGDRASIL.org_archive" . 86) ("/home/Haml3t/org/TODO.org" . 4454) ("/home/Haml3t/org/TODO.org" . 2288) ("/home/Haml3t/org/Zahn.org" . 155) ("/home/Haml3t/org/CSC21200.org" . 22726) ("/home/Haml3t/org/somedayMaybe.org" . 7093) ("/home/Haml3t/org/TODO.org" . 2058) ("/cygdrive/c/cygwin64/home/Haml3t/org/refile_Admin-PC.org" . 214) ("/cygdrive/c/cygwin64/home/Haml3t/org/refile_Admin-PC.org" . 659)))

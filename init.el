@@ -244,7 +244,7 @@ Ignores CHAR at point."
 
 
 ;;;; agenda stuff
-(setq org-agenda-files (list "~/org"))
+(setq org-agenda-files (list org-directory))
 ;; Do not dim blocked tasks
 (setq org-agenda-dim-blocked-tasks nil)
 
