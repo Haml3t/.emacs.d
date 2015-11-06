@@ -1,2 +1,2 @@
-;; org-persist.el - Admin-PC at <2015-10-29 Thu 18:54>
-(setq stored-clock-history '(("/home/Haml3t/org/TODO.org" . 1969) ("/home/Haml3t/org/ME57200.org_archive" . 353) ("/home/Haml3t/org/TODO.org" . 5373) ("/cygdrive/c/cygwin64/home/Haml3t/org/ME47400.org" . 11114)))
+;; org-persist.el - Admin-PC at <2015-11-05 Thu 20:52>
+(setq stored-clock-history '(("/cygdrive/c/cygwin64/home/Haml3t/org/refile_Admin-PC.org" . 1041) ("/cygdrive/c/cygwin64/home/Haml3t/org/refile_Admin-PC.org" . 1178) ("/cygdrive/c/cygwin64/home/Haml3t/org/refile_Admin-PC.org" . 1944) ("/cygdrive/c/cygwin64/home/Haml3t/org/diary.org" . 8431) ("/cygdrive/c/cygwin64/home/Haml3t/org/refile_Admin-PC.org" . 2224) ("/cygdrive/c/cygwin64/home/Haml3t/org/refile_Admin-PC.org" . 2632) ("/cygdrive/c/cygwin64/home/Haml3t/org/diary.org" . 9611) ("/cygdrive/c/cygwin64/home/Haml3t/org/refile_Admin-PC.org" . 3017)))
