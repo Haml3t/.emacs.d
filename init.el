@@ -824,6 +824,8 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 (server-start)
 (setq server-name "emacs-server")
 
+;; org-protocol
+;; (add-to-list 'load-path "~/")
 					; (org-agenda)
 
 (custom-set-variables
