@@ -158,7 +158,8 @@ Ignores CHAR at point."
 ;; that wizard's org config
 ;; (load "org-mode.el")
 ;; org-mode
-					; (add-to-list 'load-path (expand-file-name "cygdrive/c/cygwin64/home/Haml3t/org/lisp")) ;I dunno what this is supposed to be
+					; (add-to-list 'load-path
+;; (expand-file-name "cygdrive/c/cygwin64/home/Haml3t/org/lisp")) ;I dunno what this is supposed to be
 (require 'org-habit)
 (setq org-src-tab-acts-natively t)
 (setq org-src-fontify-natively t)
@@ -172,19 +173,21 @@ Ignores CHAR at point."
 ;; TODO states
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d@)")
-	      (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "SOMEDAY/MAYBE(s)"))))
+	      (sequence "WAITING(w@/!)" "|" "CANCELLED(c@/!)" "SOMEDAY/MAYBE(s)"))))
 (setq org-use-fast-todo-selection t)
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
 (setq org-todo-state-tags-triggers
       (quote (("CANCELLED" ("CANCELLED" . t))
 	      ("WAITING" ("WAITING" . t))
-	      ("HOLD" ("WAITING") ("HOLD" . t))
-	      (done ("WAITING") ("HOLD"))
-	      ("TODO" ("WAITING") ("CANCELLED") ("HOLD"))
-	      ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
-	      ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
+	      ("SOMEDAY/MAYBE" ("SOMEDAY_MAYBE" . t))
+	      (done ("WAITING"))
+	      ("TODO" ("WAITING") ("CANCELLED") )
+	      ("NEXT" ("WAITING") ("CANCELLED") ("SOMEDAY_MAYBE") )
+	      ("DONE" ("WAITING") ("CANCELLED") ))))
 ;; capture
+(require 'org-capture) ;; for set-tags hook
 (setq org-directory org-env-dir)
+(add-to-list 'org-capture-before-finalize-hook 'org-set-tags)
 ;(setq org-default-notes-file "/cygdrive/c/cygwin64/home/Haml3t/org/refile.org")
 (setq org-default-notes-file (concatenate 'string "~/org/refile_" hostname ".org" ))
 ;; I use C-c c to start capture mode
@@ -245,75 +248,52 @@ Ignores CHAR at point."
 ;; Compact the block agenda view
 (setq org-agenda-compact-blocks t)
 
-;; Custom agenda command definitions
-(setq org-agenda-custom-commands
-      (quote (("N" "Notes" tags "NOTE"
-	       ((org-agenda-overriding-header "Notes")
-		(org-tags-match-list-sublevels t)))
-	      ("h" "Habits" tags-todo "STYLE=\"habit\""
-	       ((org-agenda-overriding-header "Habits")
-		(org-agenda-sorting-strategy
-		 '(todo-state-down effort-up category-keep))))
-	      (" " "Agenda"
-	       ((agenda "" nil)
-		(tags-todo "-CANCELLED/!NEXT"
-			   ((org-agenda-overriding-header (concat "Project Next Tasks"
-								  (if bh/hide-scheduled-and-waiting-next-tasks
-								      ""
-								    " (including WAITING and SCHEDULED tasks)")))
-			    (org-tags-match-list-sublevels t)
-			    (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
-			    (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
-			    (org-agenda-todo-ignore-with-date bh/hide-scheduled-and-waiting-next-tasks)
-			    (org-agenda-sorting-strategy
-			     '(todo-state-down effort-up category-keep))))
-		(tags-todo "-CANCELLED+WAITING|HOLD/!"
-			   ((org-agenda-overriding-header (concat "Waiting and Postponed Tasks"
-								  (if bh/hide-scheduled-and-waiting-next-tasks
-								      ""
-								    " (including WAITING and SCHEDULED tasks)")))
-			    (org-agenda-skip-function 'bh/skip-non-tasks)
-			    (org-tags-match-list-sublevels nil)
-			    (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
-			    (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)))
-		(tags "-REFILE/"
-		      ((org-agenda-overriding-header "Tasks to Archive")
-		       (org-agenda-skip-function 'bh/skip-non-archivable-tasks)
-		       (org-tags-match-list-sublevels nil))))
-	       nil)
-	     ("p" "Projects" tags "PROJECT={.}")
-	     )))
-
-(defun bh/org-auto-exclude-function (tag)
-  "Automatic task exclusion in the agenda with / RET"
-  (and (cond
-	((string= tag "hold")
-	 t)
-	((string= tag "farm")
-	 t))
-       (concat "-" tag)))
-
 (setq org-agenda-auto-exclude-function 'bh/org-auto-exclude-function)
 
 ; Tags with fast selection keys
 (setq org-tag-alist (quote ((:startgroup)
-			    ("@errand" . ?e)
+			    ("@ERRAND" . ?E)
 			    ("@MuqManor" . ?M)
 			    ("@205" . ?2)
 			    ("@CCNY" . ?C)
-			    ("@x220" . ?x)
 			    (:endgroup)
+			    (:startgrouptag)
+			    ("@computers")
+			    (:grouptags)
+			    ("@X220")
+			    ("@BATTLESTATION")
+			    (:endgrouptag)
+			    (:startgrouptag)
+			    ("@X220")
+			    (:grouptags)
+			    ("@AdminPC")
+			    ("@DUBSTEP")
+			    (:endgrouptag)
+			    (:startgrouptag)
+			    ("@BATTLESTATION")
+			    (:grouptags)
+			    ("@YGGDRASIL")
+			    ("@WIZZARD")
+			    (:endgrouptag)
+			    ("@computers" . ?p)
+			    ("@X220" . ?X)
+			    ("BATTLESTATION" . ?B)
+			    ("@DUBSTEP" . ?D)
+			    ("@WIZZARD" . ?W)
+			    ("@YGGDRASIL" . ?Y)
 			    ("WAITING" . ?w)
 			    ("HOLD" . ?h)
-			    ("e-NABLE" . ?E)
+			    ("eNABLEatCCNY" . ?e)
+			    ("HandyNYC")
 			    ("School" . ?s)
 			    ("KINETIC". ?K)
-			    ("@YGGDRASIL" . ?y)
 			    ("SAM" . ?S)
 			    ("ORG" . ?O)
 			    ("NoInternet" . ?N)
 			    ("NOTE" . ?n)
-			    ("CANCELLED" . ?c)
+			    ("CALL" . ?c)
+			    ("PROJECT_ROOT" . ?P)
+			    ("AGENDA" . ?a)
 			    ("FLAGGED" . ??))))
 
 ; Allow setting single tags without the menu
@@ -324,23 +304,6 @@ Ignores CHAR at point."
 
 ;; stuck projects
 (setq org-stuck-projects (quote ("" nil nil "")))
-
-
-(defun bh/list-sublevels-for-projects-indented ()
-  "Set org-tags-match-list-sublevels so when restricted to a subtree we list all subtasks.
-  This is normally used by skipping functions where this variable is already local to the agenda."
-  (if (marker-buffer org-agenda-restrict-begin)
-      (setq org-tags-match-list-sublevels 'indented)
-    (setq org-tags-match-list-sublevels nil))
-  nil)
-
-(defun bh/list-sublevels-for-projects ()
-  "Set org-tags-match-list-sublevels so when restricted to a subtree we list all subtasks.
-  This is normally used by skipping functions where this variable is already local to the agenda."
-  (if (marker-buffer org-agenda-restrict-begin)
-      (setq org-tags-match-list-sublevels t)
-    (setq org-tags-match-list-sublevels nil))
-  nil)
 
 (defvar bh/hide-scheduled-and-waiting-next-tasks t)
 
@@ -360,8 +323,6 @@ Ignores CHAR at point."
 (setq org-clock-history-length 23)
 ;; Resume clocking task on clock-in if the clock is open
 (setq org-clock-in-resume t)
-;; Change tasks to NEXT when clocking in
-(setq org-clock-in-switch-to-state 'bh/clock-in-to-next)
 ;; Separate drawers for clocking and logs
 (setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))
 ;; Save clock data and state changes and notes in the LOGBOOK drawer
@@ -378,113 +339,6 @@ Ignores CHAR at point."
 (setq org-clock-auto-clock-resolution (quote when-no-clock-is-running))
 ;; Include current clocking task in clock reports
 (setq org-clock-report-include-clocking-task t)
-
-(setq bh/keep-clock-running nil)
-
-(defun bh/clock-in-to-next (kw)
-  "Switch a task from TODO to NEXT when clocking in.
-Skips capture tasks, projects, and subprojects.
-Switch projects and subprojects from NEXT back to TODO"
-  (when (not (and (boundp 'org-capture-mode) org-capture-mode))
-    (cond
-     ((and (member (org-get-todo-state) (list "TODO"))
-	   (bh/is-task-p))
-      "NEXT")
-     ((and (member (org-get-todo-state) (list "NEXT"))
-	   (bh/is-project-p))
-      "TODO"))))
-
-(defun bh/punch-in (arg)
-  "Start continuous clocking and set the default task to the
-selected task.  If no task is selected set the Organization task
-as the default task."
-  (interactive "p")
-  (setq bh/keep-clock-running t)
-  (if (equal major-mode 'org-agenda-mode)
-      ;;
-      ;; We're in the agenda
-      ;;
-      (let* ((marker (org-get-at-bol 'org-hd-marker))
-	     (tags (org-with-point-at marker (org-get-tags-at))))
-	(if (and (eq arg 4) tags)
-	    (org-agenda-clock-in '(16))
-	  (bh/clock-in-organization-task-as-default)))
-    ;;
-    ;; We are not in the agenda
-    ;;
-    (save-restriction
-      (widen)
-      ; Find the tags on the current task
-      (if (and (equal major-mode 'org-mode) (not (org-before-first-heading-p)) (eq arg 4))
-	  (org-clock-in '(16))
-	(bh/clock-in-organization-task-as-default)))))
-
-(defun bh/punch-out ()
-  (interactive)
-  (setq bh/keep-clock-running nil)
-  (when (org-clock-is-active)
-    (org-clock-out))
-  (org-agenda-remove-restriction-lock))
-
-(defun bh/clock-in-default-task ()
-  (save-excursion
-    (org-with-point-at org-clock-default-task
-      (org-clock-in))))
-
-(defun bh/clock-in-parent-task ()
-  "Move point to the parent (project) task if any and clock in"
-  (let ((parent-task))
-    (save-excursion
-      (save-restriction
-	(widen)
-	(while (and (not parent-task) (org-up-heading-safe))
-	  (when (member (nth 2 (org-heading-components)) org-todo-keywords-1)
-	    (setq parent-task (point))))
-	(if parent-task
-	    (org-with-point-at parent-task
-	      (org-clock-in))
-	  (when bh/keep-clock-running
-	    (bh/clock-in-default-task)))))))
-
-(defvar bh/organization-task-id "eb155a82-92b2-4f25-a3c6-0304591af2f9")
-
-(defun bh/clock-in-organization-task-as-default ()
-  (interactive)
-  (org-with-point-at (org-id-find bh/organization-task-id 'marker)
-    (org-clock-in '(16))))
-
-(defun bh/clock-out-maybe ()
-  (when (and bh/keep-clock-running
-	     (not org-clock-clocking-in)
-	     (marker-buffer org-clock-default-task)
-	     (not org-clock-resolving-clocks-due-to-idleness))
-    (bh/clock-in-parent-task)))
-
-(add-hook 'org-clock-out-hook 'bh/clock-out-maybe 'append)
-
-(require 'org-id)
-(defun bh/clock-in-task-by-id (id)
-  "Clock in a task by id"
-  (org-with-point-at (org-id-find id 'marker)
-    (org-clock-in nil)))
-
-(defun bh/clock-in-last-task (arg)
-  "Clock in the interrupted task if there is one
-Skip the default task and get the next one.
-A prefix arg forces clock in of the default task."
-  (interactive "p")
-  (let ((clock-in-to-task
-	 (cond
-	  ((eq arg 4) org-clock-default-task)
-	  ((and (org-clock-is-active)
-		(equal org-clock-default-task (cadr org-clock-history)))
-	   (caddr org-clock-history))
-	  ((org-clock-is-active) (cadr org-clock-history))
-	  ((equal org-clock-default-task (car org-clock-history)) (cadr org-clock-history))
-	  (t (car org-clock-history)))))
-    (widen)
-    (org-with-point-at clock-in-to-task
-      (org-clock-in nil))))
 
 ;; Archive setup
 (setq org-archive-mark-done nil)
@@ -558,6 +412,8 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
    (quote
     ("0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
  '(nil nil t)
+ '(org-agenda-auto-exclude-function (quote bh/org-auto-exclude-function))
+ '(org-agenda-compact-blocks t)
  '(org-agenda-custom-commands
    (quote
     (("N" "Notes" tags "NOTE"
@@ -600,19 +456,25 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
       ((agenda "" nil)
        (stuck ""
 	      ((org-agenda-overriding-header "Stuck Projects")))
-       (tags-todo "PROJECT={.}+PROJECT_ROOT"
+       (tags-todo "PROJECT={.}+PROJECT_ROOT-SUBPROJECT={.}"
 		  ((org-agenda-overriding-header "Projects")))
        (tags-todo "SUBPROJECT={.}+PROJECT_ROOT"
 		  ((org-agenda-overriding-header "Subprojects"))))
       nil nil)
      ("r" "Organize"
-      ((agenda "" nil)
-       (tags "REFILE"
+      ((tags "REFILE"
 	     ((org-agenda-overriding-header "Refile")))
        (stuck ""
 	      ((org-agenda-overriding-header "Stuck Projects"))))
-      nil nil))))
+      nil nil)
+     ("o" "Someday/Maybe" tags-todo "SOMEDAY_MAYBE"
+      ((org-agenda-overriding-header "Someday/Maybe"))))))
+ '(org-agenda-dim-blocked-tasks nil)
+ '(org-agenda-files (quote ("/home/haml3t/org")))
+ '(org-agenda-show-inherited-tags (quote always))
+ '(org-agenda-use-tag-inheritance t)
  '(org-babel-load-languages (quote ((emacs-lisp . t) (C . t))))
+ '(org-fast-tag-selection-single-key (quote expert))
  '(org-journal-dir "~/org/journal")
  '(org-log-into-drawer t)
  '(org-stuck-projects
@@ -620,8 +482,10 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
     ("+PROJECT_ROOT+PROJECT={.}+SUBPROJECT={.}/-TODO=\"DONE\"-TODO=\"SOMEDAY/MAYBE\""
      ("NEXT" "NEXTACTION" "DONE")
      nil "")))
+ '(org-tags-exclude-from-inheritance (quote ("PROJECT_ROOT")))
+ '(org-tags-match-list-sublevels t)
  '(org-use-property-inheritance t)
- '(org-use-tag-inheritance (quote ("!PROJECT_ROOT")))
+ '(org-use-tag-inheritance t)
  '(send-mail-function (quote smtpmail-send-it)))
 
 (require 'edit-server)
