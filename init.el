@@ -259,23 +259,23 @@ Ignores CHAR at point."
 			    (:endgroup)
 			    (:startgrouptag)
 			    ("@computers")
-			    (:grouptags)
-			    ("@X220")
-			    ("@BATTLESTATION")
-			    (:endgrouptag)
-			    (:startgrouptag)
-			    ("@X220")
-			    (:grouptags)
-			    ("@AdminPC")
-			    ("@DUBSTEP")
-			    (:endgrouptag)
-			    (:startgrouptag)
-			    ("@BATTLESTATION")
-			    (:grouptags)
-			    ("@YGGDRASIL")
-			    ("@WIZZARD")
-			    (:endgrouptag)
-			    ("@computers" . ?p)
+			    ;; (:grouptags)
+			    ;; ("@X220")
+			    ;; ("@BATTLESTATION")
+			    ;; (:endgrouptag)
+			    ;; (:startgrouptag)
+			    ;; ("@X220")
+			    ;; (:grouptags)
+			    ;; ("@AdminPC")
+			    ;; ("@DUBSTEP")
+			    ;; (:endgrouptag)
+			    ;; (:startgrouptag)
+			    ;; ("@BATTLESTATION")
+			    ;; (:grouptags)
+			    ;; ("@YGGDRASIL")
+			    ;; ("@WIZZARD")
+			    ;; (:endgrouptag)
+			    ;; ("@computers" . ?p)
 			    ("@X220" . ?X)
 			    ("BATTLESTATION" . ?B)
 			    ("@DUBSTEP" . ?D)
@@ -291,7 +291,7 @@ Ignores CHAR at point."
 			    ("ORG" . ?O)
 			    ("NoInternet" . ?N)
 			    ("NOTE" . ?n)
-			    ("CALL" . ?c)
+			    ("@CALL" . ?c)
 			    ("PROJECT_ROOT" . ?P)
 			    ("AGENDA" . ?a)
 			    ("FLAGGED" . ??))))
@@ -373,6 +373,16 @@ Ignores CHAR at point."
 	 (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 
 (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
+
+(defun export-org-agenda-to-gcal ()
+  (interactive)
+  (if (boundp 'org-agenda-default-appointment-duration)
+   (progn
+     (org-save-all-org-buffers)
+     (org-icalendar-combine-agenda-files)
+     (message (shell-command-to-string "sleep 1; scp -P 4200 ~/org.ics haml3t@milesfrankel.xyz:/home/haml3t/org/; ssh -p 4200 haml3t@milesfrankel.xyz 'chmod 644 /home/haml3t/org/org.ics'")))
+ (message "you must run org-agenda before using this function")))
+
 ;; end of org stuff
 (defun xah-copy-file-path (&optional φdir-path-only-p)
   "Copy the current buffer's file path or dired path to `kill-ring'.
@@ -477,6 +487,9 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(org-fast-tag-selection-single-key (quote expert))
  '(org-journal-dir "~/org/journal")
  '(org-log-into-drawer t)
+ '(org-modules
+   (quote
+    (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
  '(org-stuck-projects
    (quote
     ("+PROJECT_ROOT+PROJECT={.}+SUBPROJECT={.}/-TODO=\"DONE\"-TODO=\"SOMEDAY/MAYBE\""
