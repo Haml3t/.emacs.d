@@ -472,11 +472,11 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 		  ((org-agenda-overriding-header "Subprojects"))))
       nil nil)
      ("r" "Organize"
-      ((tags "REFILE"
+      ((tags "REFILE|DIARY&TODO=\"TODO\""
 	     ((org-agenda-overriding-header "Refile")))
        (stuck ""
 	      ((org-agenda-overriding-header "Stuck Projects"))))
-      nil nil)
+      nil)
      ("o" "Someday/Maybe" tags-todo "SOMEDAY_MAYBE"
       ((org-agenda-overriding-header "Someday/Maybe"))))))
  '(org-agenda-dim-blocked-tasks nil)
@@ -485,6 +485,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(org-agenda-use-tag-inheritance t)
  '(org-babel-load-languages (quote ((emacs-lisp . t) (C . t))))
  '(org-fast-tag-selection-single-key (quote expert))
+ '(org-habit-graph-column 100)
  '(org-journal-dir "~/org/journal")
  '(org-log-into-drawer t)
  '(org-modules
