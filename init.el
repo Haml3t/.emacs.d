@@ -213,6 +213,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(jabber-chat-buffer-show-avatar nil)
  '(jabber-roster-line-format "%c %-25n %u %-8s  %S")
  '(nil nil t)
+ '(org-agenda-skip-scheduled-if-done t)
  '(org-habit-graph-column 100)
  '(send-mail-function (quote smtpmail-send-it)))
 
