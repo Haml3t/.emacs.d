@@ -13,7 +13,7 @@
 
 ;; smex org-checklist org-mime
 
-(setq debug-on-error t)
+(setq debug-on-error nil)
 
 (add-to-list 'load-path (concat (getenv "HOME") "/org/"))
 ; (load "org-mode")
