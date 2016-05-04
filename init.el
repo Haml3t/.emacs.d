@@ -29,6 +29,8 @@
 (global-visual-line-mode t)
 
 (setq save-interprogram-paste-before-kill t) ;pretty much what it says on the box
+;; TRAMP
+(setq tramp-default-method "ssh")
 ;(setq ring-bell-function 'ignore)
 (fset 'yes-or-no-p 'y-or-n-p)
 (show-paren-mode t)

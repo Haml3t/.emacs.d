@@ -1,0 +1,14 @@
+;; -*- emacs-lisp -*- <16/05/04 13:09:31 /home/haml3t/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["ssh" nil "remotehost" nil nil]
+  nil)
+ (["ssh" nil "ssh" nil nil]
+  nil)
+ (["ssh" "haml3t" "host#4200" nil nil]
+  nil)
+ (["ssh" "haml3t" "milesfrankel.xyz" nil nil]
+  nil)
+ (["ssh" "haml3t" "host" nil nil]
+  nil))
