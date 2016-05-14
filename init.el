@@ -300,6 +300,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
       nil))))
  '(org-agenda-skip-scheduled-if-done t)
  '(org-habit-graph-column 100)
+ '(org-tags-exclude-from-inheritance (quote ("PROJECT_ROOT" "SUBPROJECT_ROOT")))
  '(send-mail-function (quote smtpmail-send-it)))
 
 (require 'edit-server)
