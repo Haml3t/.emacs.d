@@ -16,7 +16,11 @@
 (setq debug-on-error nil)
 
 (add-to-list 'load-path (concat (getenv "HOME") "/org/"))
-; (load "org-mode")
+					; (load "org-mode")
+;; load org elpa
+(require 'package)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+;; load taskjuggler export
 
 ;; keybindings
 (setq lisp-directory (getenv "LISP"))
