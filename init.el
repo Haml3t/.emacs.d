@@ -17,11 +17,12 @@
 
 (add-to-list 'load-path (concat (getenv "HOME") "/org/"))
 					; (load "org-mode")
+(package-initialize)
 ;; load org elpa
 (require 'package)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 ;; load taskjuggler export
-
+(require 'ox-taskjuggler)
 ;; keybindings
 (setq lisp-directory (getenv "LISP"))
 (setq hostname (getenv "HOSTNAME"))
@@ -216,6 +217,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(custom-safe-themes
    (quote
     ("0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
+ '(debug-on-error nil)
  '(jabber-chat-buffer-show-avatar nil)
  '(jabber-roster-line-format "%c %-25n %u %-8s  %S")
  '(nil nil t)
@@ -303,6 +305,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 	      (org-tags-match-list-sublevels nil))))
       nil))))
  '(org-agenda-skip-scheduled-if-done t)
+ '(org-export-backends (quote (ascii html icalendar latex taskjuggler)))
  '(org-habit-graph-column 100)
  '(org-tags-exclude-from-inheritance (quote ("PROJECT_ROOT" "SUBPROJECT_ROOT")))
  '(send-mail-function (quote smtpmail-send-it)))
