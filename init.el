@@ -165,7 +165,7 @@ Ignores CHAR at point."
 ;; that wizard's org config
 ;; (load "org-mode.el")
 ;; v1.0 org config (my first custom agendas, capture broken)
-(load "org2.el")
+(load "org3.el")
 
 ;; org-mode
 
@@ -223,90 +223,25 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(nil nil t)
  '(org-agenda-custom-commands
    (quote
-    (("N" "Notes" tags "NOTE"
-      ((org-agenda-overriding-header "Notes")
-       (org-tags-match-list-sublevels t)))
-     ("h" "Habits" tags-todo "STYLE=\"habit\""
-      ((org-agenda-overriding-header "Habits")
-       (org-agenda-sorting-strategy
+    (("n" "Next tasks"
+      ((agenda ""
+	       ((org-agenda-span 1)))
+       (tags-todo "TODO=\"NEXT\""
+		  ((org-agenda-overriding-header "REMEMBER TO FILTER BY CONTEXT"))))
+      ((org-agenda-tag-filter-preset
 	(quote
-	 (todo-state-down effort-up category-keep)))))
-     (" " "Agenda"
-      ((agenda "" nil)
-       (tags "REFILE"
-	     ((org-agenda-overriding-header "Tasks to Refile")
-	      (org-tags-match-list-sublevels nil)))
-       (tags-todo "-CANCELLED-WAITING/!"
-		  ((org-agenda-overriding-header "Stuck Projects")
-		   (org-agenda-skip-function
-		    (quote bh/skip-non-stuck-projects))
-		   (org-agenda-sorting-strategy
-		    (quote
-		     (category-keep)))))
-       (tags-todo "-HOLD-CANCELLED/!"
-		  ((org-agenda-overriding-header "Projects")
-		   (org-agenda-skip-function
-		    (quote bh/skip-non-projects))
-		   (org-tags-match-list-sublevels
-		    (quote indented))
-		   (org-agenda-sorting-strategy
-		    (quote
-		     (category-keep)))))
-       (tags-todo "-CANCELLED/!NEXT"
-		  ((org-agenda-overriding-header
-		    (concat "Project Next Tasks"
-			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
-		   (org-agenda-skip-function
-		    (quote bh/skip-projects-and-habits-and-single-tasks))
-		   (org-tags-match-list-sublevels t)
-		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
-		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
-		   (org-agenda-todo-ignore-with-date bh/hide-scheduled-and-waiting-next-tasks)
-		   (org-agenda-sorting-strategy
-		    (quote
-		     (todo-state-down effort-up category-keep)))))
-       (tags-todo "-REFILE-CANCELLED-WAITING-HOLD/!"
-		  ((org-agenda-overriding-header
-		    (concat "Project Subtasks"
-			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
-		   (org-agenda-skip-function
-		    (quote bh/skip-non-project-tasks))
-		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
-		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
-		   (org-agenda-todo-ignore-with-date bh/hide-scheduled-and-waiting-next-tasks)
-		   (org-agenda-sorting-strategy
-		    (quote
-		     (category-keep)))))
-       (tags-todo "-REFILE-CANCELLED-WAITING-HOLD/!"
-		  ((org-agenda-overriding-header
-		    (concat "Standalone Tasks"
-			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
-		   (org-agenda-skip-function
-		    (quote bh/skip-project-tasks))
-		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
-		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
-		   (org-agenda-todo-ignore-with-date bh/hide-scheduled-and-waiting-next-tasks)
-		   (org-agenda-sorting-strategy
-		    (quote
-		     (category-keep)))))
-       (tags-todo "-CANCELLED+WAITING|HOLD/!"
-		  ((org-agenda-overriding-header
-		    (concat "Waiting and Postponed Tasks"
-			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
-		   (org-agenda-skip-function
-		    (quote bh/skip-non-tasks))
-		   (org-tags-match-list-sublevels nil)
-		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
-		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)))
-       (tags "-REFILE/"
-	     ((org-agenda-overriding-header "Tasks to Archive")
-	      (org-agenda-skip-function
-	       (quote bh/skip-non-archivable-tasks))
-	      (org-tags-match-list-sublevels nil))))
-      nil))))
+	 ("-MORNING" "-NIGHT"))))
+      nil)
+     ("m" "Morning" agenda ""
+      ((org-agenda-show-tags "nil")
+       (org-agenda-tag-filter-preset
+	(quote
+	 ("+MORNING")))))
+     ("w" "Waiting for" tags-todo "TODO=\"WAITING\"" nil))))
  '(org-agenda-skip-scheduled-if-done t)
  '(org-export-backends (quote (ascii html icalendar latex taskjuggler)))
  '(org-habit-graph-column 100)
+ '(org-stuck-projects (quote ("PROJECT_ROOT | SUBPROJECT_ROOT" ("NEXT") nil "")))
  '(org-tags-exclude-from-inheritance (quote ("PROJECT_ROOT" "SUBPROJECT_ROOT")))
  '(send-mail-function (quote smtpmail-send-it)))
 
