@@ -168,16 +168,52 @@ Ignores CHAR at point."
 (load "org3.el")
 
 ;; org-mode
+;; ical export stuff
+(setq org-icalendar-combined-agenda-file "/home/haml3t/org.ics"
+      org-icalendar-timezone "America/New_York"
+      org-agenda-default-appointment-duration 30 ;; minutes
+      org-icalendar-alarm-time 10 ;; minutes
+      org-icalendar-include-todo nil;; t ;; make TODO events for non-done todos (?)
+      org-icalendar-use-deadline '(event-if-todo todo-due)
+      org-icalendar-use-scheduled '(event-if-todo))
 
+(defun gtd-export-agendas-and-calendar ()
+  "Export scheduled tasks or those with set deadlines (that aren't \"DONE\") to an iCalendar file too."
+  (interactive)
+;  (gtd-mark-completed-exported-tasks-as-done)
+  (org-store-agenda-views)
+  ;; Iterate through every headline in the agenda files, looking for not-DONE tasks that
+  ;; are scheduled or have deadlines, storing their starting character position if found.
+  (let ((calendar-hash (make-hash-table :test 'equal))
+	(calendar-items nil))
+    (org-map-entries (lambda ()
+		       (let ((scheduledp (org-get-scheduled-time (point) nil))
+			     (deadlinep (org-get-deadline-time (point) nil))
+			     (notdonep (not (equal "DONE" (org-get-todo-state))))
+			     (filename (org-entry-get (point) "FILE")))
+			 (when (and (or scheduledp
+					deadlinep)
+				    notdonep)
+			   (puthash filename (cons (point) (gethash filename calendar-hash)) calendar-hash))))
+		     nil 'agenda)
+    ;; Turn the hash into an alist
+    (maphash (lambda (key value)
+	       (add-to-list 'calendar-items (cons key value)))
+	     calendar-hash)
+    ;; Build iCalendar export file, restricting the items to only those just
+    ;; found. `calendar-items' is an alist where key is a file name and value a list of
+    ;; buffer positions pointing to entries that should appear in the calendar.
+    (apply 'org-icalendar--combine-files calendar-items (org-agenda-files t)))
+  (org-save-all-org-buffers))
 
-(defun export-org-agenda-to-gcal ()
+(defun export-org-agenda-to-gcal-local ()
   (interactive)
   (if (boundp 'org-agenda-default-appointment-duration)
-   (progn
-     (org-save-all-org-buffers)
-     (org-icalendar-combine-agenda-files)
-     (message (shell-command-to-string "sleep 1; scp -P 4200 ~/org.ics haml3t@milesfrankel.xyz:/home/haml3t/org/; ssh -p 4200 haml3t@milesfrankel.xyz 'chmod 644 /home/haml3t/org/org.ics'")))
- (message "you must run org-agenda before using this function")))
+      (progn
+	(org-save-all-org-buffers)
+	(gtd-export-agendas-and-calendar)
+       (message (shell-command-to-string "sleep 1; mv /home/haml3t/org.ics /home/haml3t/org/org.ics")))
+    (message "you must run org-agenda before using this function")))
 
 ;; end of org stuff
 (defun xah-copy-file-path (&optional φdir-path-only-p)
@@ -217,7 +253,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(custom-safe-themes
    (quote
     ("0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
- '(debug-on-error nil)
+ '(debug-on-error t)
  '(jabber-chat-buffer-show-avatar nil)
  '(jabber-roster-line-format "%c %-25n %u %-8s  %S")
  '(nil nil t)
@@ -237,7 +273,11 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
        (org-agenda-tag-filter-preset
 	(quote
 	 ("+MORNING")))))
-     ("w" "Waiting for" tags-todo "TODO=\"WAITING\"" nil))))
+     ("w" "Waiting for" tags-todo "TODO=\"WAITING\"" nil)
+     ("N" "Night" agenda ""
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+NIGHT"))))))))
  '(org-agenda-skip-scheduled-if-done t)
  '(org-export-backends (quote (ascii html icalendar latex taskjuggler)))
  '(org-habit-graph-column 100)
