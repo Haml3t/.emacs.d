@@ -1,0 +1,207 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/haml3t/school/software_design_lab/" . "assignment_3/")
+ ("/home/haml3t/school/algorithms/" . "lab1/")
+ ("/home/haml3t/school/old/Senior_D/" . "final_report/")
+ ("/home/haml3t/school/old/Aero/" . "HW3/")
+ ("/home/haml3t/school/old/energy_systems/final_project/" . "report/")
+ ("/home/haml3t/school/old/energy_systems/" . "final_project/")
+ ("/home/haml3t/school/old/" . "Senior_D/")
+ ("/home/haml3t/Documents/" . "Crye_Precision/")
+ ("/home/haml3t/code/c/ch1/" . "1.3/")
+ ("/home/haml3t/code/c/" . "ch1/")
+ ("/home/haml3t/code/" . "c/")
+ ("/home/haml3t/org/" . "old/")
+ ("/home/haml3t/.emacs.d/" . "auto-save-list/")
+ ("/home/haml3t/school/energy_systems/final_project/" . "report/")
+ ("/home/haml3t/school/energy_systems/" . "final_project/")
+ ("/home/haml3t/.config/awesome/" . "pomodoro/")
+ ("/home/haml3t/c/ch1/" . "1.9/")
+ ("/home/haml3t/c/" . "ch1/")
+ ("/home/haml3t/.vimperator/info/" . "default/")
+ ("/home/haml3t/.vimperator/" . "info/")
+ ("/home/haml3t/school/" . "software_design_lab/")
+ ("/etc/" . "netctl/")
+ ("/usr/share/awesome/themes/" . "zenburn/")
+ ("/usr/share/awesome/" . "themes/")
+ ("/usr/share/" . "awesome/")
+ ("/usr/" . "share/")
+ ("/" . "usr/")
+ ("/home/haml3t/.config/" . "awesome/")
+ ("/home/haml3t/" . ".config/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/haml3t/.config/awesome/"
+ "/home/haml3t/org/"
+ "/home/haml3t/.emacs.d/"
+ "/home/haml3t/"
+ "/home/haml3t/Documents/Crye_Precision/"
+ "/home/haml3t/school/software_design_lab/assignment_3/"
+ "/home/haml3t/school/algorithms/lab1/"
+ "/home/haml3t/school/algorithms/lab2/"
+ "/home/haml3t/school/old/Senior_D/final_report/"
+ "/home/haml3t/school/old/Aero/HW3/"
+ "/home/haml3t/org/old/"
+ "/home/haml3t/school/old/energy_systems/final_project/report/"
+ "/home/haml3t/code/c/ch1/1.3/"
+ "/home/haml3t/code/c/ch1/1.2/"
+ "/usr/share/awesome/themes/zenburn/"
+ "/home/haml3t/school/energy_systems/final_project/report/"
+ "/home/haml3t/school/Aero/final_report/"
+ "/home/haml3t/.config/awesome/pomodoro/"
+ "/home/haml3t/c/ch1/1.9/"
+ "/home/haml3t/c/ch1/1.5/"
+ "/home/haml3t/c/ch1/1.3/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "rc.lua"
+ "org3.el"
+ "init.el"
+ "KINETIC.tjp"
+ "KINETIC.org"
+ "org.ics"
+ "org2.el"
+ "main.org"
+ "main.tex"
+ "cover_letter.tex"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/haml3t/.config/" (22339 56373 925503 62000) "dconf/" "K/" "../" "menus/" "gtk-2.0/" "cef_user_data/" "pychess/" "vlc/" "gconf/" "pulse/" "transmission-daemon/" "spotify/" "libreoffice/" "terminology/" "htop/" "Synergy/" "Mist/" "awesome/" "autostart/" "eog/" "mimeapps.list" "Trolltech.conf" "gtk-3.0/" "google-chrome/" "./" "transmission/" "gnome-mplayer/" "Slack/")
+
+ ("/home/haml3t/" (22340 29073 177630 524000) ".emacs.d/" ".bash_history" "../" ".xbindkeysrc" ".xinitrc" ".irssi/" "code/" ".lesshst" "media/" ".synergy/" ".saves/" ".dropbox/" "school/" ".esd_auth" "pix" "lahey.gif" ".ssh/" "packages/" ".cache/" ".config/" "KINETIC/" "mnt/" ".Xauthority" "org/" ".pki/" ".elementary/" ".bashrc" ".gnome/" "books/" ".gnupg/" "pics/" ".gitconfig" ".local/" ".bash_logout" ".mozilla/" "org.ics" ".vimperatorrc" ".ipython/" "Documents/" "textbooks/" ".vimperator/" "Dropbox/" "Downloads/" "./" ".ethereum/" "Desktop/" ".bash_profile")
+
+ ("/home/haml3t/org/" (22338 8597 151130 767000) "school.org" "refile_DUBSTEP.org_archive" ".git/" "Handy/" "someday_maybe.org" "../" "refile_WIZZARD.org" "KINETIC.org_archive_archive" "org2.el" ".#main.org" "main.pdf" "enableatCCNY.org" "school.org_archive" "refile_DUBSTEP.org" "#main.org#" "reports/" "org3.el" "main.org" "KINETIC.org" "icons/" "enableatCCNY.org_archive" "miracle_morning.org" "main.tex" "HandyNYC.pdf" "KINETIC.org_archive" "org1.el" "refile_WIZZARD.org_archive" "HandyNYC.tex" "diary.org" "HandyNYC.org_archive" "journal/" "#diary.org#" "KINETIC.tjp" "#school.org#" "#someday_maybe.org#" "css/" "mission_statement.org" "Plan.html" "merlin_prep.org" "old/" "./" "scripts/" "HandyNYC.org" "#KINETIC.org#" "main.org_archive")
+
+ ("/home/haml3t/.emacs.d/" (22333 5038 135970 746000) "notes" ".git/" "../" "jabber-avatar-cache/" "url/" "tramp" "gnus-conf.el" "bookmarks" "ido.last" "auto-save-list/" "lisp/" "elpa/" "ac-comphist.dat" "ido.last~" "org-clock-save.el" "init.el" "./" "jabber-history/" ".gitignore" "eshell/")
+
+ ("/home/haml3t/Documents/Crye_Precision/" (22276 41252 110092 605000) "cover_letter.out" "../" "cover_letter.tex" "cover_letter.aux" "cover_letter.log" "./")
+
+ ("/home/haml3t/school/software_design_lab/assignment_3/" (22274 39733 624025 398000) "application.java" "../" "./" "application.class")
+
+ ("/home/haml3t/school/software_design_lab/" (22285 16881 547482 560000) "../" "assignment_3/" "assignment_4/" "test_prep/" "./")
+
+ ("/home/haml3t/school/software_design_lab/test_prep/" (22285 16886 487478 914000) "../" ".#arrays.java" "./")
+
+ ("/home/haml3t/school/algorithms/lab1/" (22249 62614 752577 835000) "output_required.txt" "../" "sort.h.gch" "mid_node_test.cpp" "grader.py" "sort_test.cpp" "a.out" "output_computed.txt" "sort.cpp" "makefile" "./" "sort.h" "test_data/")
+
+ ("/home/haml3t/school/algorithms/" (22274 39733 624025 398000) "../" "lab1/" "lab2/" "./")
+
+ ("/home/haml3t/school/algorithms/lab2/" (22284 21920 564793 76000) "output_required.txt" "../" "btree.h" "my_test.cpp" "grader.py" "btree.cpp" ".#btree.cpp" "a.out" "output_computed.txt" "btree_test.cpp" "makefile" "./" "btree.h.gch" "test_data/")
+
+ ("/home/haml3t/Documents/" (22267 56283 810929 302000) "Anki/" "Crye_Precision/" "../" "money/" "Screenshots/" "journal/" "./")
+
+ ("/home/haml3t/school/old/Senior_D/final_report/" (22109 57227 466595 976000) "../" "5_SAMM_Semester1FinalReport_FINAL.tex" "./")
+
+ ("/home/haml3t/school/old/Senior_D/" (22114 8944 684772 122000) "../" "final_report/" "billOfMaterials_DMS_rev22.xlsx" ".~lock.billOfMaterials_DMS_rev22.xlsx#" "./")
+
+ ("/home/haml3t/school/old/Aero/HW3/" (22078 61895 375871 210000) "../" "HW3.tex" "_region_.tex" "HW3.log" "bam2l.m" "HW3.aux" "_region_.log" "_region_.pdf" "HW3.pdf" "hw3.m" "./" "HW3.out")
+
+ ("/home/haml3t/school/old/Aero/" (22114 63347 246560 110000) "../" "HW3/" "final_report/" "./")
+
+ ("/home/haml3t/school/old/energy_systems/final_project/report/" (22116 21628 989798 853000) "../" "_region_.tex" "_region_.prv/" "_region_.log" "prv_final_project.log" "./" "final_project.tex")
+
+ ("/home/haml3t/school/old/energy_systems/final_project/" (22116 17251 73329 498000) "../" "report/" "./")
+
+ ("/home/haml3t/school/old/energy_systems/" (22116 17249 116662 920000) "../" "final_project/" "./")
+
+ ("/home/haml3t/school/old/" (22241 57101 983876 87000) "../" "energy_systems/" "Aero/" "Data_Structures/" "Senior_D/" "./")
+
+ ("/home/haml3t/school/" (22241 57114 173889 9000) "algorithms/" ".git/" "../" "software_design_lab/" "old/" "./" ".gitignore")
+
+ ("/home/haml3t/code/c/ch1/1.3/" (22098 12458 6686 431000) "../" "FtoC.c" "FtoCBackwards.c" "a.out" "./")
+
+ ("/home/haml3t/code/c/ch1/1.2/" (22098 6897 993390 702000) "../" "CtoF.c" "tempCalc.c" "a.out" "tempCalcFloat.c" "./")
+
+ ("/home/haml3t/code/c/ch1/" (22208 43210 800661 868000) "../" "1.5/" "1.6/" "1.9/" "1.10/" "1.7/" "1.1/" "1.2/" "1.3/" "./" "1.4/")
+
+ ("/home/haml3t/code/c/" (22098 2528 323337 357000) "../" "ch1/" "./")
+
+ ("/home/haml3t/org/old/" (22202 30411 243636 345000) "ME47100.org" "Makerbots.html" "Makerbots.pdf" "3DP_layout_optimizer.org" "../" "Zahn.org_archive" "David_Sugarman_KINETIC_Report.pdf" "readme.org" "#org-mode.org#" "emacs-w32.exe.stackdump" "ME47100.org_archive" "kinetic.org_archive" "ME57200.org_archive" "refile_YGGDRASIL.org_archive" "CSC21200.org" "TODO.org" "3DP_layout_optimizer.html" "refile_DUBSTEP.org" "ME57200.org" "Org Mode - Organize Your Life In Plain Text!.html" "Org Mode - Organize Your Life In Plain Text!_files/" "me44100.org" "Zahn.org" "coil_gun_prelim.pdf" "arch.org" "org-mode.el" "David_Sugarman_KINETIC_Report.html" "org.pdf" "miracle_morning.org_archive" "refile_YGGDRASIL.org" "kinetic.org" "E-Nable.org" "journal20150526" "ltxpng/" "#TODO.org#" "journal20150601" "refile_GILGAMESH.org" "journal/" "journal20150619" "org-mode.org" "manufacturing.org" "orgguide.pdf" "TODO.org_archive" "ME47400.org" "3DP_layout_optimizer.tex" "#refile_YGGDRASIL.org#" "somedayMaybe.org_archive" "journal20150618" "SAMDetailChecklist.html" "ME47400.org_archive" "harrison.org" "ALL_HAND_EVERYTHING.html" "./" "refile_Admin-PC.org" "e-NABLE.org_archive" "refile_CHAPPIE.org" "somedayMaybe.org")
+
+ ("/usr/share/awesome/themes/zenburn/" (22195 49842 671168 482000) "../" "titlebar/" "theme.lua~" "#theme.lua#" "layouts/" "zenburn-background.png" "awesome-icon.png" "taglist/" "./" "theme.lua")
+
+ ("/home/haml3t/code/" (22195 47250 774605 705000) ".git/" "../" "c/" "java/" ".#print_EOF.c" "./")
+
+ ("/home/haml3t/code/java/" (22195 47250 774605 705000) "../" "helloWorld/" "./")
+
+ ("/home/haml3t/code/java/helloWorld/" (22195 47250 774605 705000) "../" "src/" "./")
+
+ ("/home/haml3t/code/java/helloWorld/src/" (22195 50643 975517 256000) "../" "HelloWorldApp.class" "HelloWorldApp.java" "./")
+
+ ("/usr/share/" (22191 32999 605334 833000) "gettext/" "tabset/" "autoconf/" "dict/" "lirc/" "bash-completion/" "gnupg/" "t1lib/" "edje/" "pixmaps/" "wayland/" "libcaca/" "mimelnk/" "automake-1.15/" "ImageMagick-6/" "cracklib/" "../" "sip/" "ecore_imf/" "kbd/" "GConf/" "glib-2.0/" "tor/" "makepkg/" "nano/" "glade/" "imlib2/" "gnome/" "aclocal-1.15/" "applications/" "xml/" "hwdata/" "readline/" "emotion/" "keyutils/" "luajit-2.0.4/" "qt4/" "fonts/" "bison/" "guile/" "application-registry/" "pacman/" "mkinitcpio/" "gtk-doc/" "common-lisp/" "libgnome-desktop-3.0/" "doc/" "ghostscript/" "avahi/" "makepkg-template/" "perl5/" "gtk-2.0/" "irssi/" "idl/" "ethumb_client/" "color/" "eolian/" "file/" "dhcpcd/" "liblangtag/" "emacs/" "icu/" "elua/" "colord/" "man/" "texinfo/" "cmake/" "pulseaudio/" "ss/" "classes/" "lua/" "pkgconfig/" "ecore_x/" "speech-dispatcher/" "evas/" "locale/" "xcb/" "tmux/" "java/" "gcc-5.3.0/" "vala/" "help/" "icons/" "iana-etc/" "desktop-directories/" "git-gui/" "p11-kit/" "X11/" "systemd/" "libreoffice/" "terminology/" "aclocal/" "awk/" "texmf-dist/" "thumbnailers/" "gnome-control-center/" "libthai/" "lua-lgi/" "awesome/" "efreet/" "et/" "gitk/" "djvu/" "polkit-1/" "tc/" "os-prober/" "zoneinfo/" "sounds/" "git/" "licenses/" "redland/" "dbus-1/" "eeze/" "eog/" "factory/" "misc/" "groff/" "alsa/" "i18n/" "menu/" "sgml/" "ecore/" "elementary/" "anki/" "ethumb/" "themes/" "mime-info/" "gdb/" "ca-certificates/" "ntp/" "gir-1.0/" "jack-audio-connection-kit/" "git-core/" "gtk-3.0/" "libtool/" "vim/" "./" "graphite2/" "info/" "terminfo/" "gst-plugins-base/" "transmission/" "eo/" "gitweb/" "tlpkg/" "xsessions/" "evince/" "embryo/" "appdata/" "m17n/" "grub/" "mime/" "zsh/" "libalpm/")
+
+ ("/home/haml3t/.emacs.d/elpa/org-20150914/" (22078 61876 299205 403000) "ob-plantuml.elc" "ob-C.el" "ob-scala.elc" "org-id.el" "ob-abc.el" "ob-sqlite.elc" "ox-ascii.elc" "ob.el" "org-compat.el" "org.el" "ob-comint.elc" "org-id.elc" "org-capture.elc" "ob-org.el" "org-rmail.el" "org-feed.el" "org-bbdb.el" "org-docview.el" "org-entities.el" "ob-shen.elc" "ob-clojure.el" "orgcard.pdf" "ob-haskell.el" "ob-makefile.elc" "etc/" "ob-eval.elc" "org-ctags.el" "ob-sql.elc" "ob-sed.elc" "org-attach.elc" "ob-lilypond.elc" "COPYING" "org-archive.el" "ob-shen.el" "ox-icalendar.elc" "org-mhe.elc" "org-macro.el" "org-src.elc" "ob-forth.elc" "org-capture.el" "ob-R.elc" "org-table.el" "ob-ocaml.elc" "org-install.el" "ob-eval.el" "ob-calc.elc" "org-indent.elc" "ob-lisp.el" "org-feed.elc" "org-agenda.elc" "org-macro.elc" "ob-python.elc" "org-element.elc" "ox-texinfo.elc" "ob-processing.elc" "ob-clojure.elc" "org-macs.el" "ob-abc.elc" "org-list.elc" "ox-org.el" "ob-core.el" "ob-sqlite.el" "org-entities.elc" "ob-js.elc" "ox-ascii.el" "ox-html.elc" "org-bibtex.el" "org-docview.elc" "ob-calc.el" "org-pkg.elc" "ob-lob.el" "ob-awk.elc" "org-macs.elc" "org-loaddefs.el" "ob-keys.elc" "org-footnote.el" "ob-processing.el" "org-footnote.elc" "org-list.el" "ob-ebnf.elc" "ob-io.el" "ob-forth.el" "ob-haskell.elc" "org-datetree.el" "ob-exp.el" "org-bibtex.elc" "ob-ebnf.el" "org-mobile.el" "org-ctags.elc" "org-mouse.elc" "ob-octave.elc" "org" "org-inlinetask.el" "org-pcomplete.elc" "org-habit.elc" "ob-js.el" "org.elc" "ob-picolisp.elc" "README_ELPA" "ob-tangle.el" "org-inlinetask.elc" "ob-octave.el" "org-version.el" "ob-groovy.el" "ox-man.el" "ox-publish.elc" "org-compat.elc" "ob-gnuplot.el" "ob-screen.elc" "org-src.el" "ox.el" "dir" "ob-fortran.elc" "ob-comint.el" "ob-ruby.elc" "ox-latex.elc" "ob-lisp.elc" "org-irc.el" "org-habit.el" "ob-dot.el" "ob-io.elc" "ob-table.el" "ob-R.el" "org-timer.elc" "org-plot.elc" "org-mobile.elc" "ob-coq.el" "ob-latex.elc" "ob-ledger.elc" "org-clock.elc" "org-archive.elc" "org-gnus.elc" "org-protocol.el" "org-crypt.el" "ob-scala.el" "ob-exp.elc" "org-rmail.elc" "org-table.elc" "ob-core.elc" "org-pkg.el" "ob-lob.elc" "ob-matlab.el" "org-protocol.elc" "ob-ditaa.elc" "ob-ledger.el" "ox-publish.el" "ob-J.elc" "org-timer.el" "ob-picolisp.el" "ob-fortran.el" "org-datetree.elc" "org-indent.el" "org-eshell.elc" "ob-css.el" "ob-maxima.elc" "org-faces.elc" "ob-scheme.el" "org-crypt.elc" "ob-org.elc" "ob-sass.el" "ob-ruby.el" "ob-table.elc" "ob-emacs-lisp.el" "ob-J.el" "ox-beamer.el" "org-gnus.el" "ob-java.elc" "ob-sed.el" "ob-scheme.elc" "ob-mscgen.el" "ob-coq.elc" "ob-groovy.elc" "ob-emacs-lisp.elc" "ox-odt.el" "ob-gnuplot.elc" "ob-dot.elc" "ob-mscgen.elc" "ox.elc" "ox-md.elc" "ob-perl.elc" "ob-ditaa.el" "ox-texinfo.el" "ob-java.el" "org-element.el" "ob-shell.elc" "ob-sass.elc" "ox-html.el" "ob-ref.elc" "org-mouse.el" "ox-odt.elc" "ox-icalendar.el" "org-autoloads.el" "org-info.el" "ox-beamer.elc" "org-plot.el" "org-faces.el" "ob-latex.el" "org-info.elc" "ob.elc" "org-clock.el" "org-bbdb.elc" "ob-shell.el" "ob-python.el" "ob-makefile.el" "ox-man.elc" "ob-ref.el" "ob-awk.el" "ob-asymptote.elc" "ob-keys.el" "ob-sql.el" "org-pcomplete.el" "ob-asymptote.el" "org-colview.elc" "org-mhe.el" "org-attach.el" "ob-ocaml.el" "org-irc.elc" "ob-perl.el" "ox-org.elc" "org-agenda.el" "ob-css.elc" "ob-C.elc" "ob-tangle.elc" "org-w3m.el" "org-colview.el" "ox-md.el" "ob-plantuml.el" "ob-maxima.el" "ob-lilypond.el" "org-eshell.el" "org-w3m.elc" "ob-matlab.elc" "ob-screen.el" "ox-latex.el" "../" "./")
+
+ ("/home/haml3t/.emacs.d/auto-save-list/" (22154 9893 30163 312000) "../" ".saves-589-DUBSTEP~" ".saves-18777-DUBSTEP~" ".saves-484-DUBSTEP~" ".saves-476-DUBSTEP~" ".saves-1042-DUBSTEP~" ".saves-7101-DUBSTEP~" "./")
+
+ ("/home/haml3t/.config/awesome/" (22109 39339 763303 462000) "../" "rc.lua" "pomodoro/" "net_widgets/" "./")
+
+ ("/home/haml3t/school/Aero/final_report/" (22115 5199 982893 767000) "../" "aero_final_report.tex" "mcode.sty" "./")
+
+ ("/home/haml3t/school/energy_systems/final_project/report/" (22116 21628 989798 853000) "../" "_region_.tex" "_region_.prv/" "_region_.log" "prv_final_project.log" "./" "final_project.tex")
+
+ ("/home/haml3t/school/energy_systems/final_project/" (22116 17251 73329 498000) "../" "report/" "./")
+
+ ("/home/haml3t/school/energy_systems/" (22116 17249 116662 920000) "../" "final_project/" "./")
+
+ ("/home/haml3t/school/Aero/" (22114 63347 246560 110000) "../" "HW3/" "final_report/" "./")
+
+ ("/etc/" (22110 64627 183311 61000) "pcmcia/" "initcpio/" "kernel/" "security/" "mail.rc" "host.conf" "hosts" "at-spi2/" "sysctl.d/" "ImageMagick-6/" "../" "man_db.conf" "services" "dhcpcd.conf" "depmod.d/" "libpaper.d/" "papersize" "localtime" "default/" "bash.bashrc" "xml/" "modules-load.d/" "securetty" "mtab" "fonts/" "passwd-" "locale.conf" "fstab" "request-key.d/" "request-key.conf" "os-release" "gshadow" "texmf/" "avahi/" ".pwd.lock" "acpi/" "gtk-2.0/" "group-" "sudoers" "locale.gen" "libnl/" "krb5.conf" "group" "resolv.conf" "ssl/" "nsswitch.conf" "sudoers.tmp~" "profile" "inputrc" "hostname" "mkinitcpio.d/" "logrotate.conf" "speech-dispatcher/" "wpa_supplicant/" "lvm/" "netctl/" "gconf/" "gshadow-" "login.defs" "gai.conf" "fuse.conf" "pulse/" "xdg/" "ntp.conf" "skel/" "logrotate.d/" "openldap/" "mime.types" "arch-release" "drirc" "X11/" "systemd/" "resolvconf.conf" "grub.d/" "mkinitcpio.conf" "protocols" "libreoffice/" "ld.so.cache" "ld.so.conf.d/" "cups/" "crypttab" "pacman.conf" "binfmt.d/" "dhcpcd.duid" "mdadm.conf" "polkit-1/" "nscd.conf" "dbus-1/" "xinetd.d/" "rpc" "pacman.d/" "profile.d/" "resolv.conf.bak" "netconfig" "iproute2/" "issue" "motd" "passwd" "nanorc" "modprobe.d/" "machine-id" "ifplugd/" "bash.bash_logout" "gdb/" "ca-certificates/" ".updated" "environment" "shells" "mke2fs.conf" "tmpfiles.d/" "adjtime" "gtk-3.0/" "shadow-" "ld.so.conf" "pm/" "pkcs11/" "./" "makepkg.conf" "pam.d/" "udev/" "sudoers.d/" "shadow" "iptables/")
+
+ ("/home/haml3t/school/Senior_D/" (22114 8944 684772 122000) "../" "final_report/" "billOfMaterials_DMS_rev22.xlsx" ".~lock.billOfMaterials_DMS_rev22.xlsx#" "./")
+
+ ("/home/haml3t/school/Senior_D/final_report/" (22109 57227 466595 976000) "../" "5_SAMM_Semester1FinalReport_FINAL.tex" "./")
+
+ ("/home/haml3t/.config/awesome/pomodoro/" (22096 3263 786793 777000) ".git/" "../" "init.lua" "pomodoro.png" "README.md" "./")
+
+ ("/home/haml3t/c/ch1/1.9/" (22104 62841 896736 486000) "1-17/" "../" "1-16/" "longestLine.c" "a.out" "./")
+
+ ("/home/haml3t/c/ch1/" (22099 37817 783335 214000) "../" "1.5/" "1.6/" "1.9/" "1.7/" "1.1/" "1.2/" "1.3/" "./" "1.4/")
+
+ ("/home/haml3t/c/ch1/1.7/" (22099 26974 870013 763000) "../" "power.c" "a.out" "1-15/" "./")
+
+ ("/home/haml3t/c/ch1/1.5/" (22099 15495 450016 668000) "../" "wcBareBones.c" "copyBlankCompress.c" "EOFPrint.c" "lineCount.c" "copyInToOut1.c" "print1wpl.c" "charCount2.c" "a.out" "copyObviousReplace.c" "./" "charCount.c")
+
+ ("/home/haml3t/c/ch1/1.6/" (22099 12817 333385 605000) "arrayCount.c" "../" "1.14/" "a.out" "1.13/" "./")
+
+ ("/home/haml3t/c/ch1/1.6/1.14/" (22099 13472 933398 89000) "../" "1_14.c" "a.out" "./")
+
+ ("/home/haml3t/c/ch1/1.6/1.13/" (22099 12745 913384 246000) "../" "1_13.c" "a.out" "./")
+
+ ("/home/haml3t/c/ch1/1.3/" (22098 12458 6686 431000) "../" "FtoC.c" "FtoCBackwards.c" "a.out" "./")
+
+ ("/home/haml3t/c/ch1/1.2/" (22098 6897 993390 702000) "../" "CtoF.c" "tempCalc.c" "a.out" "tempCalcFloat.c" "./")
+
+ ("/home/haml3t/c/" (22098 2528 323337 357000) "../" "ch1/" "./")
+
+ ("/home/haml3t/.vimperator/info/default/" (22094 46834 709557 204000) "../" "local-marks" "history-command" "history-search" "macros" "quickmarks" "ignored-keys" "./")
+
+ ("/home/haml3t/.vimperator/info/" (22094 26984 214001 310000) "../" "default/" "./")
+
+ ("/home/haml3t/.vimperator/" (22094 26984 214001 310000) "../" "./" "info/")
+
+ ("/home/haml3t/school/Data_Structures/quiz_2_linear_function/" (22090 62547 810011 561000) "../" "LinearFunction.h" "./")
+
+ ("/home/haml3t/school/Data_Structures/" (22078 61895 422537 874000) "../" "Oct 6/" "HW6/" "Oct 1/" "__MACOSX/" "Oct_15/" "Oct 8/" "LinkedList/" "./" "HW5/")
+
+ ("/etc/netctl/" (22086 32356 281473 665000) "../" "wlp3s0-lasers 2.4" "examples/" "hooks/" "wlp3s0-Dethnet 2.4ghz" "interfaces/" "./")
+
+ ("/usr/share/awesome/themes/" (21832 47980 0 0) "../" "default/" "zenburn/" "sky/" "./")
+
+ ("/usr/share/awesome/" (21832 47980 0 0) "../" "lib/" "icons/" "themes/" "./")
+
+ ("/usr/" (22076 10707 572290 332000) "lib64/" "../" "lib/" "sbin/" "bin/" "local/" "share/" "include/" "src/" "./")
+
+ ("/home/" (22076 12424 481373 2000) "../" "haml3t/" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

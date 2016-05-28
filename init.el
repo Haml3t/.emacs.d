@@ -33,6 +33,8 @@
 
 (global-visual-line-mode t)
 
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
 (setq save-interprogram-paste-before-kill t) ;pretty much what it says on the box
 ;; TRAMP
 (setq tramp-default-method "ssh")
@@ -268,7 +270,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 	(quote
 	 ("-MORNING" "-NIGHT"))))
       nil)
-     ("m" "Morning" agenda ""
+     ("o" "Morning" agenda ""
       ((org-agenda-show-tags "nil")
        (org-agenda-tag-filter-preset
 	(quote
@@ -277,11 +279,24 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
      ("N" "Night" agenda ""
       ((org-agenda-tag-filter-preset
 	(quote
-	 ("+NIGHT"))))))))
+	 ("+NIGHT")))))
+     ("p" "Process" tags "+REFILE"
+      ((org-agenda-overriding-header "Is it actionable? If so, what's the next action?")))
+     ("P" "Projects"
+      ((tags-todo "+PROJECT=.+PROJECT_ROOT"
+		  ((org-agenda-overriding-header "Projects")))
+       (stuck ""
+	      ((org-agenda-overriding-header "Stuck projects"))))
+      nil nil))))
  '(org-agenda-skip-scheduled-if-done t)
  '(org-export-backends (quote (ascii html icalendar latex taskjuggler)))
  '(org-habit-graph-column 100)
- '(org-stuck-projects (quote ("PROJECT_ROOT | SUBPROJECT_ROOT" ("NEXT") nil "")))
+ '(org-stuck-projects
+   (quote
+    ("PROJECT_ROOT | SUBPROJECT_ROOT"
+     ("NEXT")
+     ("SOMEDAY_MAYBE")
+     "")))
  '(org-tags-exclude-from-inheritance (quote ("PROJECT_ROOT" "SUBPROJECT_ROOT")))
  '(send-mail-function (quote smtpmail-send-it)))
 
@@ -305,4 +320,10 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "white"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "red"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "dark magenta"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "yellow"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "green"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "cyan"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "chocolate")))))
