@@ -23,6 +23,8 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 ;; load taskjuggler export
 (require 'ox-taskjuggler)
+;; load org-depend
+(require 'org-depend)
 ;; keybindings
 (setq lisp-directory (getenv "LISP"))
 (setq hostname (getenv "HOSTNAME"))
@@ -34,6 +36,10 @@
 (global-visual-line-mode t)
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;; set font
+(add-to-list 'default-frame-alist
+	     '(font . "DejaVu Sans Mono-10"))
 
 (setq save-interprogram-paste-before-kill t) ;pretty much what it says on the box
 ;; TRAMP
@@ -49,6 +55,10 @@
 (add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
 
 (global-set-key (kbd "<C-tab>") 'switch-window)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+
+(global-hl-line-mode 1)
+(remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 
 (defun save-macro (name)
   "save a macro. Take a name as argument
@@ -98,6 +108,15 @@
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
+
+(defun org-taskjuggler-export-process-open ()
+  (interactive)
+  (org-taskjuggler-export)
+  (shell-command
+   (concat
+    (concat "tj3 "
+	    (substring (buffer-file-name) 0 -4))
+    (concat ".tjp; firefox Plan.html"))))
 
 ;;(global-set-key (kbd "C-S-j") (switch-to-buffer "*-jabber-chat-Jane Cotler-*")
 (defun compile-and-run-haskell ()
@@ -155,10 +174,29 @@ Ignores CHAR at point."
 		    (backward-char direction))
 		  (point)))))
 ;; ido
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(ido-mode 1)				;when creating new file, disable with c-f
-(setq ido-file-extensions-order '(".org" ".txt" ".tex" ".py" ".emacs" ".xml" ".el" ".ini" ".cfg" ".cnf"))
+;; (setq ido-enable-flex-matching t)
+;; (setq ido-everywhere t)
+;; (ido-mode 1)				;when creating new file, disable with c-f
+;; (setq ido-file-extensions-order '(".org" ".txt" ".tex" ".py" ".emacs" ".xml" ".el" ".ini" ".cfg" ".cnf"))
+
+;; helm
+
+(require 'helm-config)
+(require 'helm)
+(setq helm-autoresize-max-height 30)
+(helm-autoresize-mode 1)
+(ido-mode -1)
+(helm-mode 1)
+(setq helm-mode-fuzzy-match t)
+(setq	helm-semantic-fuzzy-match t)
+(setq	helm-semantic-imenu-match t)
+(setq	helm-completion-in-region-fuzzy-match t)
+(setq	helm-split-window-in-side-p t)
+(setq	helm-ff-file-name-history-use-recentf t)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "M-.") 'helm-semantic-or-imenu)
 
 ;; jabber
 (add-to-list 'load-path lisp-directory)
@@ -262,14 +300,30 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(org-agenda-custom-commands
    (quote
     (("n" "Next tasks"
-      ((agenda ""
+      ((tags-todo "+MAJOR+GOAL+PROJECT_ROOT"
+		  ((org-agenda-overriding-header "MAJOR GOALS")))
+       (agenda ""
 	       ((org-agenda-span 1)))
        (tags-todo "TODO=\"NEXT\""
 		  ((org-agenda-overriding-header "REMEMBER TO FILTER BY CONTEXT"))))
       ((org-agenda-tag-filter-preset
 	(quote
-	 ("-MORNING" "-NIGHT"))))
+	 ("-MORNING" "-NIGHT" "-PROJECT_ROOT" "-SUBPROJECT_ROOT" "-SOMEDAY_MAYBE" "-daily"))))
       nil)
+     ("c" "Check-in (during day)"
+      ((tags-todo "reminder"
+		  ((org-agenda-tag-filter-preset
+		    (quote
+		     ("+self")))))
+       (agenda ""
+	       ((org-agenda-span 1)
+		(org-agenda-sorting-strategy
+		 (quote
+		  (habit-up)))
+		(org-agenda-tag-filter-preset
+		 (quote
+		  ("-MORNING"))))))
+      nil nil)
      ("o" "Morning" agenda ""
       ((org-agenda-show-tags "nil")
        (org-agenda-tag-filter-preset
@@ -283,10 +337,27 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
      ("p" "Process" tags "+REFILE"
       ((org-agenda-overriding-header "Is it actionable? If so, what's the next action?")))
      ("P" "Projects"
-      ((tags-todo "+PROJECT=.+PROJECT_ROOT"
+      ((tags-todo "+PROJECT=.+PROJECT_ROOT-SOMEDAY_MAYBE"
 		  ((org-agenda-overriding-header "Projects")))
        (stuck ""
 	      ((org-agenda-overriding-header "Stuck projects"))))
+      nil nil)
+     ("A" "TODOs to archive" tags "TODO=\"DONE\""
+      ((org-agenda-sorting-strategy
+	(quote
+	 (time-up)))))
+     ("O" "Someday/Maybe" tags-todo "+SOMEDAY_MAYBE-TODO=\"DONE\"-TODO=\"CANCELLED\"" nil)
+     ("r" "Project View"
+      ((agenda ""
+	       ((org-agenda-tag-filter-preset
+		 (quote
+		  ("+PROJECT=Klokateer_Halloween_2016")))
+		(org-agenda-overriding-header "")
+		(org-agenda-tag-filter-preset
+		 (quote
+		  ("+PROJECT=\"Klokateer_Halloween_2016\"")))
+		(org-agenda-overriding-header "")))
+       (tags-todo "+PROJECT_ROOT" nil))
       nil nil))))
  '(org-agenda-skip-scheduled-if-done t)
  '(org-export-backends (quote (ascii html icalendar latex taskjuggler)))
@@ -298,6 +369,48 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
      ("SOMEDAY_MAYBE")
      "")))
  '(org-tags-exclude-from-inheritance (quote ("PROJECT_ROOT" "SUBPROJECT_ROOT")))
+ '(org-taskjuggler-default-global-properties
+   "shift s40 \"Part time shift\" {
+  workinghours wed, thu, fri off
+}
+flags tier1, note
+")
+ '(org-taskjuggler-default-reports
+   (quote
+    ("textreport report \"Plan\" {
+  formats html
+  header '== %title =='
+
+  center -8<-
+    [#Plan Plan] | [#Resource_Allocation Resource Allocation]
+    ----
+    === Plan ===
+    <[report id=\"plan\"]>
+    ----
+    === Resource Allocation ===
+    <[report id=\"resourceGraph\"]>
+  ->8-
+}
+
+# A traditional Gantt chart with a project overview.
+taskreport plan \"\" {
+  headline \"Project Plan\"
+  columns bsi, name, start, end, effort, chart
+  rolluptask test, note
+  hidetask note
+  loadunit shortauto
+  hideresource 1
+}
+
+# A graph showing resource allocation. It identifies whether each
+# resource is under- or over-allocated for.
+resourcereport resourceGraph \"\" {
+  headline \"Resource Allocation Graph\"
+  columns no, name, effort, weekly
+  loadunit shortauto
+  hidetask ~(isleaf() & isleaf_())
+  sorttasks plan.start.up
+}")))
  '(send-mail-function (quote smtpmail-send-it)))
 
 (require 'edit-server)
