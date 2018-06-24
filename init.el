@@ -13,14 +13,17 @@
 
 ;; smex org-checklist org-mime
 
-(setq debug-on-error nil)
+(setq debug-on-error t)
 
 (add-to-list 'load-path (concat (getenv "HOME") "/org/"))
 					; (load "org-mode")
+
+(scroll-bar-mode -1)
+
 (package-initialize)
 ;; load org elpa
 (require 'package)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 ;; load taskjuggler export
 (require 'ox-taskjuggler)
 ;; load org-depend
@@ -33,7 +36,14 @@
 
 (column-number-mode)
 
+(desktop-save-mode t)
+
+(require 'epa-file)
+(epa-file-enable)
+
 (global-visual-line-mode t)
+
+(if (file-exists-p abbrev-file-name) (quietly-read-abbrev-file))
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
@@ -104,6 +114,15 @@
 (define-key global-map (kbd "C-c q") 'vr/query-replace)
 (define-key global-map (kbd "C-c m") 'vr/mc-mark)
 
+;; isearch
+
+(add-hook 'isearch-mode-hook
+	  (function
+	   (lambda ()
+	     (define-key isearch-mode-map "\C-h" 'isearch-mode-help)
+	     (define-key isearch-mode-map "\C-t" 'isearch-toggle-regexp)
+	     (define-key isearch-mode-map "\C-c" 'isearch-toggle-case-fold)
+	     (define-key isearch-mode-map "\C-j" 'isearch-edit-string))))
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
 (global-set-key (kbd "C-M-s") 'isearch-forward)
@@ -133,8 +152,6 @@
 ;; auto-compile TeX with pdflatex on write
 (add-hook 'latex-mode-hook (lambda () (add-hook 'after-save-hook (message "laser") nil 'make-it-local)))
 
-(latex-preview-pane-enable)
-
 (setq align-rules-list '())
 
 (global-linum-mode t)
@@ -144,6 +161,8 @@
   "ace-jump-mode"
   "Emacs quick move minor mode"
   t)
+(setq ace-jump-mode-case-fold t)
+
 (define-key global-map (kbd "M-j")	'ace-jump-mode)
 (add-hook 'matlab-mode-hook (lambda () (local-set-key (kbd "M-j") 'ace-jump-mode)))
 (define-key global-map (kbd "M-a")	'align-regexp)
@@ -191,7 +210,7 @@ Ignores CHAR at point."
 (setq	helm-semantic-fuzzy-match t)
 (setq	helm-semantic-imenu-match t)
 (setq	helm-completion-in-region-fuzzy-match t)
-(setq	helm-split-window-in-side-p t)
+(setq	helm-split-window-in-side-p nil)
 (setq	helm-ff-file-name-history-use-recentf t)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
@@ -204,58 +223,9 @@ Ignores CHAR at point."
 
 ;; that wizard's org config
 ;; (load "org-mode.el")
-;; v1.0 org config (my first custom agendas, capture broken)
-(load "org3.el")
+(load "org4.el")
 
-;; org-mode
-;; ical export stuff
-(setq org-icalendar-combined-agenda-file "/home/haml3t/org.ics"
-      org-icalendar-timezone "America/New_York"
-      org-agenda-default-appointment-duration 30 ;; minutes
-      org-icalendar-alarm-time 10 ;; minutes
-      org-icalendar-include-todo nil;; t ;; make TODO events for non-done todos (?)
-      org-icalendar-use-deadline '(event-if-todo todo-due)
-      org-icalendar-use-scheduled '(event-if-todo))
 
-(defun gtd-export-agendas-and-calendar ()
-  "Export scheduled tasks or those with set deadlines (that aren't \"DONE\") to an iCalendar file too."
-  (interactive)
-;  (gtd-mark-completed-exported-tasks-as-done)
-  (org-store-agenda-views)
-  ;; Iterate through every headline in the agenda files, looking for not-DONE tasks that
-  ;; are scheduled or have deadlines, storing their starting character position if found.
-  (let ((calendar-hash (make-hash-table :test 'equal))
-	(calendar-items nil))
-    (org-map-entries (lambda ()
-		       (let ((scheduledp (org-get-scheduled-time (point) nil))
-			     (deadlinep (org-get-deadline-time (point) nil))
-			     (notdonep (not (equal "DONE" (org-get-todo-state))))
-			     (filename (org-entry-get (point) "FILE")))
-			 (when (and (or scheduledp
-					deadlinep)
-				    notdonep)
-			   (puthash filename (cons (point) (gethash filename calendar-hash)) calendar-hash))))
-		     nil 'agenda)
-    ;; Turn the hash into an alist
-    (maphash (lambda (key value)
-	       (add-to-list 'calendar-items (cons key value)))
-	     calendar-hash)
-    ;; Build iCalendar export file, restricting the items to only those just
-    ;; found. `calendar-items' is an alist where key is a file name and value a list of
-    ;; buffer positions pointing to entries that should appear in the calendar.
-    (apply 'org-icalendar--combine-files calendar-items (org-agenda-files t)))
-  (org-save-all-org-buffers))
-
-(defun export-org-agenda-to-gcal-local ()
-  (interactive)
-  (if (boundp 'org-agenda-default-appointment-duration)
-      (progn
-	(org-save-all-org-buffers)
-	(gtd-export-agendas-and-calendar)
-       (message (shell-command-to-string "sleep 1; mv /home/haml3t/org.ics /home/haml3t/org/org.ics")))
-    (message "you must run org-agenda before using this function")))
-
-;; end of org stuff
 (defun xah-copy-file-path (&optional φdir-path-only-p)
   "Copy the current buffer's file path or dired path to `kill-ring'.
 If `universal-argument' is called, copy only the dir path.
@@ -281,6 +251,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 (setq server-name "emacs-server")
 
 ;; org-protocol
+(require 'org-protocol)
 ;; (add-to-list 'load-path "~/")
 					; (org-agenda)
 
@@ -289,6 +260,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(case-fold-search t)
  '(custom-enabled-themes (quote (lush)))
  '(custom-safe-themes
    (quote
@@ -299,76 +271,219 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(nil nil t)
  '(org-agenda-custom-commands
    (quote
-    (("n" "Next tasks"
-      ((tags-todo "+MAJOR+GOAL+PROJECT_ROOT"
-		  ((org-agenda-overriding-header "MAJOR GOALS")))
-       (agenda ""
-	       ((org-agenda-span 1)))
-       (tags-todo "TODO=\"NEXT\""
-		  ((org-agenda-overriding-header "REMEMBER TO FILTER BY CONTEXT"))))
-      ((org-agenda-tag-filter-preset
+    (("N" "Notes" tags "NOTE"
+      ((org-agenda-overriding-header "Notes")
+       (org-tags-match-list-sublevels t)))
+     ("h" "Habits" tags-todo "STYLE=\"habit\""
+      ((org-agenda-overriding-header "Habits")
+       (org-agenda-sorting-strategy
 	(quote
-	 ("-MORNING" "-NIGHT" "-PROJECT_ROOT" "-SUBPROJECT_ROOT" "-SOMEDAY_MAYBE" "-daily"))))
-      nil)
-     ("c" "Check-in (during day)"
-      ((tags-todo "reminder"
-		  ((org-agenda-tag-filter-preset
-		    (quote
-		     ("+self")))))
-       (agenda ""
-	       ((org-agenda-span 1)
-		(org-agenda-sorting-strategy
-		 (quote
-		  (habit-up)))
-		(org-agenda-tag-filter-preset
-		 (quote
-		  ("-MORNING"))))))
-      nil nil)
-     ("o" "Morning" agenda ""
-      ((org-agenda-show-tags "nil")
-       (org-agenda-tag-filter-preset
-	(quote
-	 ("+MORNING")))))
-     ("w" "Waiting for" tags-todo "TODO=\"WAITING\"" nil)
-     ("N" "Night" agenda ""
-      ((org-agenda-tag-filter-preset
-	(quote
-	 ("+NIGHT")))))
-     ("p" "Process" tags "+REFILE"
-      ((org-agenda-overriding-header "Is it actionable? If so, what's the next action?")))
-     ("P" "Projects"
-      ((tags-todo "+PROJECT=.+PROJECT_ROOT-SOMEDAY_MAYBE"
-		  ((org-agenda-overriding-header "Projects")))
-       (stuck ""
-	      ((org-agenda-overriding-header "Stuck projects"))))
-      nil nil)
-     ("A" "TODOs to archive" tags "TODO=\"DONE\""
+	 (todo-state-down effort-up category-keep)))))
+     ("r" "Refile" tags "REFILE"
+      ((org-agenda-overriding-header "Refile")
+       (org-tags-match-list-sublevels t)))
+     ("E" "Shortest to longest effort estimates (BWD)" alltodo ""
       ((org-agenda-sorting-strategy
 	(quote
-	 (time-up)))))
-     ("O" "Someday/Maybe" tags-todo "+SOMEDAY_MAYBE-TODO=\"DONE\"-TODO=\"CANCELLED\"" nil)
-     ("r" "Project View"
-      ((agenda ""
-	       ((org-agenda-tag-filter-preset
-		 (quote
-		  ("+PROJECT=Klokateer_Halloween_2016")))
-		(org-agenda-overriding-header "")
-		(org-agenda-tag-filter-preset
-		 (quote
-		  ("+PROJECT=\"Klokateer_Halloween_2016\"")))
-		(org-agenda-overriding-header "")))
-       (tags-todo "+PROJECT_ROOT" nil))
-      nil nil))))
+	 (effort-down)))))
+     ("d" "Delegated projects" tags "delegated_project"
+      ((org-agenda-overriding-header "Delegated Projects")
+       (org-tags-match-list-sublevels t)))
+     ("w" "Waiting" tags-todo "-CANCELLED+WAITING|HOLD/!"
+      ((org-agenda-overriding-header
+	(concat "Waiting and Postponed Tasks"
+		(if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
+       (org-agenda-skip-function
+	(quote bh/skip-non-tasks))
+       (org-tags-match-list-sublevels nil)
+       (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
+       (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)))
+     (" " "Agenda"
+      ((agenda "" nil)
+       (tags "REFILE"
+	     ((org-agenda-overriding-header "Tasks to Refile")
+	      (org-tags-match-list-sublevels nil)))
+       (tags-todo "-CANCELLED/!"
+		  ((org-agenda-overriding-header "Stuck Projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-stuck-projects))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (tags-todo "-HOLD-CANCELLED/!"
+		  ((org-agenda-overriding-header "Projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-projects))
+		   (org-tags-match-list-sublevels
+		    (quote indented))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (tags-todo "-CANCELLED/!NEXT"
+		  ((org-agenda-overriding-header
+		    (concat "Project Next Tasks"
+			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
+		   (org-agenda-skip-function
+		    (quote bh/skip-projects-and-habits-and-single-tasks))
+		   (org-tags-match-list-sublevels t)
+		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-with-date bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (todo-state-down effort-up category-keep)))))
+       (tags-todo "-REFILE-CANCELLED-WAITING-HOLD/!"
+		  ((org-agenda-overriding-header
+		    (concat "Project Subtasks"
+			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-project-tasks))
+		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-with-date bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (tags-todo "-REFILE-CANCELLED-WAITING-HOLD/!"
+		  ((org-agenda-overriding-header
+		    (concat "Standalone Tasks"
+			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
+		   (org-agenda-skip-function
+		    (quote bh/skip-project-tasks))
+		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-with-date bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (tags-todo "-CANCELLED+WAITING|HOLD/!"
+		  ((org-agenda-overriding-header
+		    (concat "Waiting and Postponed Tasks"
+			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-tasks))
+		   (org-tags-match-list-sublevels nil)
+		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)))
+       (tags "-REFILE/"
+	     ((org-agenda-overriding-header "Tasks to Archive")
+	      (org-agenda-skip-function
+	       (quote bh/skip-non-archivable-tasks))
+	      (org-tags-match-list-sublevels nil))))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("-SOMEDAY_MAYBE" "-@MORNING" "-@NIGHT"))))
+      nil)
+     ("b" "BWD"
+      ((agenda "" nil)
+       (tags "REFILE"
+	     ((org-agenda-overriding-header "Tasks to Refile")
+	      (org-tags-match-list-sublevels nil)))
+       (tags-todo "-CANCELLED/!"
+		  ((org-agenda-overriding-header "Stuck Projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-stuck-projects))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (tags-todo "-HOLD-CANCELLED/!"
+		  ((org-agenda-overriding-header "Projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-projects))
+		   (org-tags-match-list-sublevels
+		    (quote indented))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (tags-todo "-CANCELLED/!NEXT"
+		  ((org-agenda-overriding-header
+		    (concat "Project Next Tasks"
+			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
+		   (org-agenda-skip-function
+		    (quote bh/skip-projects-and-habits-and-single-tasks))
+		   (org-tags-match-list-sublevels t)
+		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-with-date bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (todo-state-down effort-up category-keep)))))
+       (tags-todo "-REFILE-CANCELLED-WAITING-HOLD/!"
+		  ((org-agenda-overriding-header
+		    (concat "Project Subtasks"
+			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-project-tasks))
+		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-with-date bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (tags-todo "-REFILE-CANCELLED-WAITING-HOLD/!"
+		  ((org-agenda-overriding-header
+		    (concat "Standalone Tasks"
+			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
+		   (org-agenda-skip-function
+		    (quote bh/skip-project-tasks))
+		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-with-date bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (tags-todo "-CANCELLED+WAITING|HOLD/!"
+		  ((org-agenda-overriding-header
+		    (concat "Waiting and Postponed Tasks"
+			    (if bh/hide-scheduled-and-waiting-next-tasks "" " (including WAITING and SCHEDULED tasks)")))
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-tasks))
+		   (org-tags-match-list-sublevels nil)
+		   (org-agenda-todo-ignore-scheduled bh/hide-scheduled-and-waiting-next-tasks)
+		   (org-agenda-todo-ignore-deadlines bh/hide-scheduled-and-waiting-next-tasks)))
+       (tags "-REFILE/"
+	     ((org-agenda-overriding-header "Tasks to Archive")
+	      (org-agenda-skip-function
+	       (quote bh/skip-non-archivable-tasks))
+	      (org-tags-match-list-sublevels nil))))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+BWD" "-SOMEDAY_MAYBE"))))
+      nil)
+     ("O" "Morning"
+      ((agenda "" nil))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+@MORNING" "-ROOT" "-title" "-TEST")))
+       (org-agenda-overriding-columns-format "%30ITEM %EFFORT %6CLOCKSUM %6DONEBY %CLOSED")))
+     ("n" "Night"
+      ((agenda "" nil))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+@NIGHT" "-ROOT" "-title" "-TEST")))
+       (org-agenda-overriding-columns-format "%30ITEM %EFFORT %6CLOCKSUM %6DONEBY %CLOSED")))
+     ("o" "Someday/maybe" todo "SOMEDAY/MAYBE"
+      ((org-tags-match-list-sublevels
+	(quote indented)))))))
+ '(org-agenda-files
+   (quote
+    ("~/org/BWD_IT.org" "~/org/BWD.org" "~/org/self.org")))
  '(org-agenda-skip-scheduled-if-done t)
+ '(org-agenda-start-on-weekday 0)
+ '(org-agenda-sticky t)
+ '(org-agenda-time-grid
+   (quote
+    ((daily today require-timed)
+     "----------------"
+     (800 1000 1200 1400 1600 1800 2000))))
+ '(org-complete-tags-always-offer-all-agenda-tags t)
+ '(org-default-notes-file "~/org/refile_DUBSTEP.org")
  '(org-export-backends (quote (ascii html icalendar latex taskjuggler)))
  '(org-habit-graph-column 100)
- '(org-stuck-projects
+ '(org-protocol-default-template-key "w")
+ '(org-tags-exclude-from-inheritance
    (quote
-    ("PROJECT_ROOT | SUBPROJECT_ROOT"
-     ("NEXT")
-     ("SOMEDAY_MAYBE")
-     "")))
- '(org-tags-exclude-from-inheritance (quote ("PROJECT_ROOT" "SUBPROJECT_ROOT")))
+    ("PROJECT_ROOT" "SUBPROJECT_ROOT" "title" "ROOT" "crypt" "WAITING")))
  '(org-taskjuggler-default-global-properties
    "shift s40 \"Part time shift\" {
   workinghours wed, thu, fri off
@@ -411,7 +526,12 @@ resourcereport resourceGraph \"\" {
   hidetask ~(isleaf() & isleaf_())
   sorttasks plan.start.up
 }")))
+ '(org-use-property-inheritance t)
+ '(package-selected-packages
+   (quote
+    (org helm-org-rifle fireplace web-mode visual-regexp rsense rainbow-delimiters org-plus-contrib org-journal nodejs-repl neotree matlab-mode markdown-mode magit lush-theme lua-mode jabber iedit ido-hacks ido-gnus helm-bbdb gnus-spotlight gnorb ghci-completion ghc flymake-lua flycheck-hdevtools fish-mode f edit-server cl-generic bbdb-android autopair auto-complete-c-headers auto-complete-auctex auctex ace-window ace-jump-mode)))
  '(send-mail-function (quote smtpmail-send-it)))
+
 
 (require 'edit-server)
 (edit-server-start)
@@ -425,7 +545,8 @@ resourcereport resourceGraph \"\" {
 (add-hook 'LaTeX-mode-hook
 	  (lambda () (local-set-key (kbd "M-c") 'save-and-compile-latex)))
 
-(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "lynx")
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "google-chrome-stable")
 ;; bbdb and gnus
 (load "~/.emacs.d/gnus-conf.el")
 (custom-set-faces
