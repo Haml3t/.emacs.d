@@ -2,44 +2,308 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Sun Jun 24 09:52:37 2018
+;; Created Fri Jul 27 16:39:21 2018
 ;; Desktop file format version 208
-;; Emacs version 26.1
+;; Emacs version 25.2.2
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (23343 41509 822838 724000) (desktop . "208") "haml3t@DUBSTEP" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1") (font-parameter . "DejaVu Sans Mono-10") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#E0E0E0") (background-color . "#202020") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "white") (environment) (sticky) (frameset--id . "0C05-8024-4939-C6DA") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0.0") (explicit-name) (fullscreen-restore . maximized) (height . 43) (width . 167) (left . 0) (top . 20)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 7) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 68) (min-pixel-width . 80) (min-pixel-height-ignore . 34) (min-pixel-width-ignore . 56) (min-pixel-height-safe . 17) (min-pixel-width-safe . 16)) leaf (pixel-width . 1357) (pixel-height . 721) (total-width . 169) (total-height . 42) (normal-height . 1.0) (normal-width . 1.0) (buffer "refile_DUBSTEP.org" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 3) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1))))])
+(setq desktop-saved-frameset [frameset 1 (23387 33529 884801 248000) (desktop . "208") "haml3t@THESEUS" nil nil ((((font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1") (font-parameter . "DejaVu Sans Mono-10") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#E0E0E0") (background-color . "#202020") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (fullscreen) (display-type . color) (background-mode . dark) (cursor-color . "white") (environment) (sticky) (frameset--id . "3B22-D3A1-2F25-BBA0") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (visibility . t) (display . ":0") (explicit-name) (height . 42) (width . 168) (left . 0) (top . 18)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 7) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 68) (min-pixel-width . 80) (min-pixel-height-ignore . 34) (min-pixel-width-ignore . 56) (min-pixel-height-safe . 17) (min-pixel-width-safe . 16)) leaf (pixel-width . 1362) (pixel-height . 712) (total-width . 170) (total-height . 41) (normal-height . 1.0) (normal-width . 1.0) (buffer "*Org Agenda(B)*" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 3) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 181) (start . 1))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
-(setq regexp-search-ring '("payroll" "someday" "all clock " "all cameras" "agenda-files" "org-agenda-fi" "agenda-f" "finance" "freshs" "as" "org-bu" "org-bull" "hostname" "conncat" "org-defau" "org-defa"))
+(setq regexp-search-ring '("punches to 0" "phase 2" "finishin" "exenta" "update B" "update" "exenta" "sysaid" "specifi" "roi" "agent" "msi" "back up" "exen" "aaron" "don"))
 (setq register-alist nil)
-(setq file-name-history '("~/org/refile_DUBSTEP.org" "~/org/BWD_IT.org" "~/org/org4.el" "/home/haml3t/.bashrc" "/home/haml3t/Dropbox/BWD/BWD_code/daily_attendance_by_dept/output.txt" "/home/haml3t/Dropbox/BWD/BWD_code/daily_attendance_by_dept/output2.txt" "/home/haml3t/Dropbox/BWD/BWD_code/daily_attendance_by_dept/output.csv" "~/Dropbox/BWD/BWD_code/daily_attendance_by_dept/daily_attendance_by_dept.py" "~/Dropbox/BWD/BWD_code/work_listing_pre_processing/work_list_pre_process.py" "~/org/0refile_phone.org" "~/org/PARADISE_WARFARE.org" "~/BWD/IT/Capability Statement Principle Group.pdf" "/home/haml3t/org/old/org3/self.org" "/home/haml3t/org/old/org3/main.org" "~/BWD/network/Adv_IP_Scan_svrbwd.xlsx" "/tmp/crontab.fDpQoK" "/tmp/crontab.lAmo2A" "/tmp/crontab.spGnRb" "/tmp/crontab.AhTk9d" "~/BWD/Byte/old_PO_custom_formats.zip" "~/BWD/Byte/PDL_setup/webpdlIIS7&8.pdf" "~/.emacs.d/init.el" "~/org/computers.org" "~/org/self.org" "~/org/BWD_hurricane.org" "~/org/cars_driving.org" "~/org/BWD_Byte.org" "~/org/linda_email_raw" "~/org/BWD.org" "~/org/BWD_personal.org" "~/org/people.org" "~/org/gear.org" "~/org/BWD_production.org" "~/org/BWD_contacts.org" "~/org/quotes.org" "~/org/BWD_operations.org" "~/org/803_Condado_del_Mar.org" "~/org/everyday.org"))
+(setq file-name-history '("~/.config/i3/config" "/etc/pam.d/systemd-user" "~/.profile" "/home/haml3t/.git/COMMIT_EDITMSG" "~/org/old/org4.el" "~/org/BWD_personnel.org" "~/org/old/org4/self.org" "~/org/self.org" "~/org/old/org4/consume_media.org" "~/org/old/org4/BWD_network_comms.org" "~/org/old/org4/BWD_IT.org" "~/org/BWD_IT.org" "/home/haml3t/.config/i3/config" "~/org/old/org4/refile_DUBSTEP.org" "~/org/old/org4/BWD_IT_hardware.org" "~/org/gear.org" "~/org/old/org4/BWD.org" "~/org/BWD_BYTE_reporting.org" "~/org/BWD_IT_hardware.org" "~/org/old/org4/BWD_Byte.org_archive" "~/org/old/org4/BWD_Byte.org" "~/org/old/org4/BWD_IT.org_archive" "~/org/old/org4/BWD_IT_hardware.org_archive" "~/org/BWD_network_comms.org" "~/org/people.org" "~/.emacs.d/init.el" "/home/haml3t/.config/i3/config" "~/org/refile_THESEUS.org" "/home/haml3t/.xbindkeysrc" "~/org/everyday.org" "~/org/BWD_BYTE.org" "~/org/0refile_phone.org" "~/org/old/org4/tutoring.org" "~/org/org5.el" "/home/haml3t/.bashrc" "/home/haml3t/.xbindkeysrc" "~/org/refile_DUBSTEP.org" "~/org/org4.el" "/home/haml3t/.bashrc" "/home/haml3t/Dropbox/BWD/BWD_code/daily_attendance_by_dept/output.txt" "/home/haml3t/Dropbox/BWD/BWD_code/daily_attendance_by_dept/output2.txt" "/home/haml3t/Dropbox/BWD/BWD_code/daily_attendance_by_dept/output.csv" "~/Dropbox/BWD/BWD_code/daily_attendance_by_dept/daily_attendance_by_dept.py" "~/Dropbox/BWD/BWD_code/work_listing_pre_processing/work_list_pre_process.py" "~/org/PARADISE_WARFARE.org" "~/BWD/IT/Capability Statement Principle Group.pdf" "/home/haml3t/org/old/org3/self.org" "/home/haml3t/org/old/org3/main.org" "~/BWD/network/Adv_IP_Scan_svrbwd.xlsx" "/tmp/crontab.fDpQoK" "/tmp/crontab.lAmo2A" "/tmp/crontab.spGnRb" "/tmp/crontab.AhTk9d" "~/BWD/Byte/old_PO_custom_formats.zip" "~/BWD/Byte/PDL_setup/webpdlIIS7&8.pdf" "~/org/computers.org" "~/org/BWD_hurricane.org" "~/org/cars_driving.org" "~/org/BWD_Byte.org" "~/org/linda_email_raw" "~/org/BWD.org" "~/org/BWD_personal.org" "~/org/BWD_production.org" "~/org/BWD_contacts.org" "~/org/quotes.org" "~/org/BWD_operations.org" "~/org/803_Condado_del_Mar.org"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 208
-  "/home/haml3t/org/refile_DUBSTEP.org"
-  "refile_DUBSTEP.org"
+  "/home/haml3t/org/BWD.org"
+  "BWD.org"
   'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(16524 nil)
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  19
+  '(11494 nil)
   nil
   nil
-  '((buffer-display-time 23343 1347 577237 421000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring (5153 6703 2066))))
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (13413 2909 2722 8682 95))))
 
 (desktop-create-buffer 208
-  "/home/haml3t/org/BWD_production.org"
-  "BWD_production.org"
+  "/home/haml3t/org/BWD_IT.org"
+  "BWD_IT.org"
   'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  3203
-  '(622 nil)
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  22508
+  '(22508 nil)
   nil
   nil
-  '((buffer-display-time 23340 4377 991187 943000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring (2465 1))))
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (23122 1 38048 38558 37663 36343 18913 24780 16075 16068 20068 19932 24311 15229 21577 16073))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/BWD_BYTE.org"
+  "BWD_BYTE.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  30278
+  '(29545 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (26003 28817 29209 27819 18016 15517 15059 15058 12694 12009 7609 3867))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/refile_THESEUS.org"
+  "refile_THESEUS.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  322
+  '(322 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring (322 322 322 322 322 1))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/org5.el"
+  "org5.el"
+  'emacs-lisp-mode
+  '(visual-line-mode auto-complete-mode yas-minor-mode autopair-mode linum-mode helm-mode rainbow-delimiters-mode)
+  5784
+  '(2467 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix) (truncate-lines))
+  '((mark-ring (1 5784 5785 5740 2777 3826 8960 8729 5071 5026 6009 5782))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/.config/i3/config"
+  "config"
+  'conf-space-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  5128
+  '(5088 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (5194 5138 1))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/everyday.org_archive"
+  "everyday.org_archive"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/awesome_projects.org"
+  "awesome_projects.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/tutoring.org"
+  "tutoring.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  2687
+  '(2847 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (57 1376 22))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/AWESOME.org"
+  "AWESOME.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  2981
+  '(7199 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/fitness.org"
+  "fitness.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  21022
+  '(24256 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (9804 26140 27904 31299 27971 21150 34207 551 21 1 26647 26611 28041 10124 4844 30569))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/old/org4/BWD.org"
+  "BWD.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  70448
+  '(64631 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (34143 1))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/0refile_phone.org"
+  "0refile_phone.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  20
+  '(20 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (20))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/BWD_BYTE_reporting.org"
+  "BWD_BYTE_reporting.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  15606
+  '(789 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (66 789 34 34 13233 4401 5229 12681 12696 3917 3098 1155 34 1041 806 1))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/old/org4/BWD_Byte_reports.org"
+  "BWD_Byte_reports.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  31
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/self.org"
+  "self.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  14889
+  '(14889 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . raw-text-unix) (truncate-lines))
+  '((mark-ring (14889 6237 5444 5165 4407 4023 3520 2747 2387 14453 10880 12595 2010 18))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/people.org"
+  "people.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  54127
+  '(54449 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (54127 1))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/old/org4/refile_HEX.org"
+  "refile_HEX.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/NYC.org"
+  "NYC.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  11
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (1))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/803_Condado_del_Mar.org"
+  "803_Condado_del_Mar.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  8960
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/BWD_personal.org"
+  "BWD_personal.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  18064
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/martial_arts.org"
+  "martial_arts.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  413
+  '(31 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (31))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/cooking.org"
+  "cooking.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/projects.org"
+  "projects.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  607
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
 
 (desktop-create-buffer 208
   "/home/haml3t/.emacs.d/elpa/org-plus-contrib-20180611/org-capture.el"
@@ -50,104 +314,380 @@
   '(nil nil)
   nil
   nil
-  '((buffer-display-time 23340 4373 263192 818000) (buffer-file-coding-system . prefer-utf-8-unix) (truncate-lines))
+  '((buffer-file-coding-system . prefer-utf-8-unix) (truncate-lines))
   '((mark-ring nil)))
 
 (desktop-create-buffer 208
-  "/home/haml3t/org/cooking.org"
-  "cooking.org"
+  "/home/haml3t/org/BWD_network_comms.org"
+  "BWD_network_comms.org"
   'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  7498
-  '(11963 nil)
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  14697
+  '(14318 nil)
   nil
   nil
-  '((buffer-display-time 23339 65412 142961 807000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (11834 11834 4626 4709 8076 7914))))
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring (5829 5534 2645 5613 5969 23488 25335))))
 
 (desktop-create-buffer 208
-  "/home/haml3t/org/BWD_IT_hardware.org"
-  "BWD_IT_hardware.org"
+  "/home/haml3t/org/gear.org"
+  "gear.org"
   'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  22055
-  '(31137 nil)
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  31766
+  '(29983 nil)
   nil
   nil
-  '((buffer-display-time 23339 63965 810384 560000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring (36805 39667 40469 38922 45997 45997 41671 33902 33902 28548 28548 26 26 1))))
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (29983 16413 1 29723 23839 25933 26245 18645 10859 8405))))
 
 (desktop-create-buffer 208
-  "/home/haml3t/org/org4.el"
-  "org4.el"
-  'emacs-lisp-mode
-  '(visual-line-mode eldoc-mode auto-complete-mode yas-minor-mode autopair-mode linum-mode helm-mode rainbow-delimiters-mode)
-  1731
-  '(6110 nil)
+  "/home/haml3t/org/old/org4/someday_maybe.org"
+  "someday_maybe.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  44296
+  '(nil nil)
   nil
   nil
-  '((buffer-display-time 23339 55902 950096 221000) (buffer-file-coding-system . prefer-utf-8-unix) (truncate-lines))
-  '((mark-ring (6111 1))))
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
 
 (desktop-create-buffer 208
-  "/home/haml3t/org/BWD_IT.org"
-  "BWD_IT.org"
+  "/home/haml3t/org/BWD_ISO.org"
+  "BWD_ISO.org"
   'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  148859
-  '(126677 nil)
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  3954
+  '(nil nil)
   nil
   nil
-  '((buffer-display-time 23338 32930 302661 857000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring (162999 52852 127175 60645 153506 153209 32239 60628 152668 152668 122432 64142 70394 69990 79920 103217))))
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
 
 (desktop-create-buffer 208
-  "/home/haml3t/org/IT_temp.txt"
-  "IT_temp.txt"
+  "/home/haml3t/org/cars_driving.org"
+  "cars_driving.org"
   'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  5211
-  '(1 nil)
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  19422
+  '(nil nil)
   nil
   nil
-  '((buffer-display-time 23338 32837 927556 22000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/self.org"
-  "self.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  87100
-  '(152253 nil)
-  nil
-  nil
-  '((buffer-display-time 23338 32228 849483 424000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring (41821 41548 41363 37140 45234 45234 35347 43111 43074 76991 56315 75567 75644 47130 28664 28499))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_Byte_reports.org"
-  "BWD_Byte_reports.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  90796
-  '(21165 nil)
-  nil
-  nil
-  '((buffer-display-time 23338 31772 58108 96000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (31 1 82953 62528 52 71383 114 35379))))
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
 
 (desktop-create-buffer 208
   "/home/haml3t/.emacs.d/init.el"
   "init.el"
   'emacs-lisp-mode
-  '(visual-line-mode eldoc-mode auto-complete-mode yas-minor-mode autopair-mode linum-mode helm-mode rainbow-delimiters-mode)
-  8183
-  '(944 nil)
+  '(visual-line-mode auto-complete-mode yas-minor-mode autopair-mode linum-mode helm-mode rainbow-delimiters-mode)
+  1280
+  '(8261 nil)
   nil
   nil
-  '((buffer-display-time 23338 31753 765372 904000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (944 5 1196 8183 5289 1 19642 7371 7360 7360))))
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (1 8261 7454 8261 12222))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/.profile"
+  ".profile"
+  'sh-mode
+  '(visual-line-mode auto-complete-mode yas-minor-mode autopair-mode linum-mode helm-mode rainbow-delimiters-mode)
+  906
+  '(837 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring (904 809 1))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/Dropbox/.emacs.d/elpa/org-9.1.13/org.el"
+  "org.el"
+  'emacs-lisp-mode
+  '(visual-line-mode auto-complete-mode yas-minor-mode autopair-mode linum-mode helm-mode rainbow-delimiters-mode)
+  705148
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/gear.org_archive"
+  "gear.org_archive"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  56
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/skill_trees.org"
+  "skill_trees.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  3600
+  '(7549 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (7549 7549 1))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/consume_media.org"
+  "consume_media.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  33182
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/aesthetic.org"
+  "aesthetic.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  2447
+  '(3862 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . raw-text-unix) (truncate-lines))
+  '((mark-ring (3853 3688 2815 1))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/THESEUS.org"
+  "THESEUS.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  299
+  '(7266 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (7266 7008 3770 2648 757))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/BWD_IT_hardware.org"
+  "BWD_IT_hardware.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  50685
+  '(49999 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring (21720 25361 26))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/old/org4.el"
+  "org4.el"
+  'emacs-lisp-mode
+  '(visual-line-mode auto-complete-mode yas-minor-mode autopair-mode linum-mode helm-mode rainbow-delimiters-mode)
+  16785
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/BWD_personnel.org"
+  "BWD_personnel.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  5742
+  '(43 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/quotes.org"
+  "quotes.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  8381
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "org"
+  'dired-mode
+  '(visual-line-mode yas-minor-mode linum-mode helm-mode)
+  225
+  '(nil nil)
+  t
+  '("/home/haml3t/org/")
+  '((truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/old/org4/cars_driving.org"
+  "cars_driving.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  3620
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/everyday.org"
+  "everyday.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  2137
+  '(1848 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/diary.org"
+  "diary.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  165056
+  '(134187 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (135307 19 205602 1 nil))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/BWD_IT.org_archive"
+  "BWD_IT.org_archive"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  19051
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/old/org4/consume_media.org"
+  "consume_media.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  31279
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/old/org4/BWD_network_comms.org"
+  "BWD_network_comms.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  28117
+  '(3206 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring (1))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/old/org4/refile_DUBSTEP.org"
+  "refile_DUBSTEP.org"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  4647
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring (18930 4647 1))))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/fitness.org_archive"
+  "fitness.org_archive"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  59
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/BWD_IT_hardware.org_archive"
+  "BWD_IT_hardware.org_archive"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  9212
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/people.org_archive"
+  "people.org_archive"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  691
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/BWD.org_archive"
+  "BWD.org_archive"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  11167
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/old/org4/BWD_network_comms.org_archive"
+  "BWD_network_comms.org_archive"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  15757
+  '(15161 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/haml3t/org/old/org4/BWD_Byte.org_archive"
+  "BWD_Byte.org_archive"
+  'org-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  137526
+  '(45922 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (36053 138297 1 45922))))
 
 (desktop-create-buffer 208
   "/home/haml3t/.emacs.d/elpa/org-plus-contrib-20180611/org-agenda.el"
@@ -158,259 +698,19 @@
   '(265933 nil)
   nil
   nil
-  '((buffer-display-time 23331 61566 222497 989000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
   '((mark-ring (173797 173876 267605 265907 266297 266183 173851 1))))
 
 (desktop-create-buffer 208
-  "/home/haml3t/org/consume_media.org_archive"
-  "consume_media.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  2905
+  "/home/haml3t/.emacs.d/elpa/org-9.1.13/org-loaddefs.el"
+  "org-loaddefs.el"
+  'emacs-lisp-mode
+  '(visual-line-mode eldoc-mode auto-complete-mode yas-minor-mode autopair-mode linum-mode helm-mode rainbow-delimiters-mode)
+  87610
   '(nil nil)
   nil
   nil
-  '((buffer-display-time 23331 60399 661597 940000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/803_Condado_del_Mar.org"
-  "803_Condado_del_Mar.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  6997
-  '(5532 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12402 815299 171000) (buffer-file-coding-system . utf-8-emacs-unix) (truncate-lines))
-  '((mark-ring (5532 228 2942 3591 3591 3591 542 3591 1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/people.org"
-  "people.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  73589
-  '(51991 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12406 272433 67000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring (57444 47623 25381 25381 48705 51211 51211 44527))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/Team_Rubicon.org"
-  "Team_Rubicon.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  13753
-  '(24848 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12407 194750 953000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring (24848 24848 24848 24808 24808 24808 25253 25253 24681 24686 35 24681 24681 11574 24590 11560))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_Byte.org"
-  "BWD_Byte.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  86139
-  '(166072 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12428 255127 814000) (buffer-file-coding-system . utf-8-emacs-unix) (truncate-lines))
-  '((mark-ring (148313 148327 1 140481 20042 21617 176830 20628 19935 1 68324 155881 155447 156078 47853 47560))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_personnel.org"
-  "BWD_personnel.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  144
-  '(184 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12431 946983 962000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (183 4061 4142 4142 43))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/finances.org"
-  "finances.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  4875
-  '(1347 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12433 374864 250000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (57 2178 2178 9558 10483 24 2177))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_Byte_training.org"
-  "BWD_Byte_training.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  3071
-  '(33 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12434 707522 737000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (33 1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/cooking.org_archive"
-  "cooking.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  3788
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12435 328861 221000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/computers.org"
-  "computers.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  48581
-  '(44805 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12438 325962 2000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (31967 42818 31644))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_network_comms.org"
-  "BWD_network_comms.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  49383
-  '(23095 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12440 276145 867000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring (32478 32478 26480 26480 26 26 1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/Puerto_Rico.org"
-  "Puerto_Rico.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  2493
-  '(1 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12440 933600 706000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_personal.org"
-  "BWD_personal.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  14560
-  '(963 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12442 305814 22000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (9283 8341 8295 6867 6798))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_ISO.org"
-  "BWD_ISO.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1893
-  '(3195 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12444 775758 707000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (3195 1 1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_operations.org"
-  "BWD_operations.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  713
-  '(2720 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12445 722082 62000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (41 8581 1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/AWESOME.org"
-  "AWESOME.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  10268
-  '(7362 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12447 161632 202000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring (2240 361 6943 3031 6943 72 295))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/projects.org"
-  "projects.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  467
-  '(1 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12447 555922 307000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/everyday.org_archive"
-  "everyday.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  14386
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12448 828061 594000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/games.org_archive"
-  "games.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  57
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12449 272233 798000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/consume_media.org"
-  "consume_media.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  25977
-  '(11208 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12450 813554 344000) (buffer-file-coding-system . utf-8-emacs-unix) (truncate-lines))
-  '((mark-ring (9737 7068 6671 1354 881 17361 8143))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/refile_HEX.org"
-  "refile_HEX.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  20
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12451 408487 935000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines))
   '((mark-ring nil)))
 
 (desktop-create-buffer 208
@@ -422,140 +722,8 @@
   '(2238 nil)
   nil
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23336 12457 890172 41000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines))
   '((mark-ring (1021 1746 2177 2074 2278 2206 2205 2205 2017 2073 2426 12 2052 8 1 2073))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/gear.org_archive"
-  "gear.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  5524
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12459 17777 603000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD.org_archive"
-  "BWD.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  51767
-  '(33982 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12461 145579 907000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (17886 17886))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/gear.org"
-  "gear.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  16246
-  '(1097 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12462 227646 264000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring (5988 5191 2999 3677 3677 2415))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_quality.org"
-  "BWD_quality.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  2667
-  '(2811 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12462 751442 975000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (1041 1098))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/quotes.org"
-  "quotes.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  8938
-  '(7846 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12463 374256 642000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (872 809 72 8382 8382 1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/0refile_phone.org"
-  "0refile_phone.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  20
-  '(20 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12463 867653 591000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (20))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/people.org_archive"
-  "people.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  74712
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12466 341495 259000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/quotes.org_archive"
-  "quotes.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  58
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12466 922161 459000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/week_plans.org"
-  "week_plans.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  23
-  '(23 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12467 378950 913000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/future_keep_eye_on.org"
-  "future_keep_eye_on.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  4847
-  '(4377 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12468 150846 291000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring (5204 3816 6236 6236 6139 6139 1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_Finance.org_archive"
-  "BWD_Finance.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12468 829333 875000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
 
 (desktop-create-buffer 208
   "/home/haml3t/Dropbox/BWD/BWD_code/work_listing_pre_processing/work_list_pre_process.py"
@@ -566,595 +734,19 @@
   '(1056 nil)
   nil
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23336 12469 467715 817000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines))
   '((mark-ring (276 276 1056 1056 1056 1056 1056))))
 
 (desktop-create-buffer 208
-  "/home/haml3t/org/BWD_Byte.org_archive"
-  "BWD_Byte.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  262539
-  '(171143 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12473 528079 858000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/diary.org"
-  "diary.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  204956
-  '(194973 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12477 832398 763000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (194675 194973 194917 194973 194499))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_IT_passwords.org_archive"
-  "BWD_IT_passwords.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
+  "/home/haml3t/.emacs.d/diary"
+  "diary"
+  'diary-mode
+  '(visual-line-mode yas-minor-mode autopair-mode linum-mode helm-mode)
   1
   '(nil nil)
   nil
   nil
-  '((buffer-display-time 23336 12478 340817 953000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_ISO.org_archive"
-  "BWD_ISO.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12478 968589 136000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/cars_driving.org"
-  "cars_driving.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  6193
-  '(4770 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12480 191781 860000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (3811 15547 17177))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_IT.org_archive"
-  "BWD_IT.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  174274
-  '(175646 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12485 800179 469000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (147103 149976 149961 149969 148328))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_network_comms.org_archive"
-  "BWD_network_comms.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12486 890172 33000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_Byte.org_archive_archive"
-  "BWD_Byte.org_archive_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  2677
-  '(3174 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12487 372586 47000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (2677))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/tutoring.org"
-  "tutoring.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  4137
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12488 545375 855000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_production.org_archive"
-  "BWD_production.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  9137
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12489 424596 299000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_quality.org_archive"
-  "BWD_quality.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12489 993770 195000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/Puerto_Rico.org_archive"
-  "Puerto_Rico.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12490 577745 428000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/dating.org_archive"
-  "dating.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12491 343667 362000) (buffer-file-coding-system . iso-latin-1-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_hurricane.org"
-  "BWD_hurricane.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  262
-  '(262 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12491 854099 449000) (buffer-file-coding-system . utf-8-emacs-unix) (truncate-lines))
-  '((mark-ring (262 262 262 262 262 262 262 262 262 262 262 262 262 262 262 262))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/diary.org_archive"
-  "diary.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12492 477929 214000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_contacts.org"
-  "BWD_contacts.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  3179
-  '(1291 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12493 800214 395000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/finances.org_archive"
-  "finances.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12494 328380 299000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/future_keep_eye_on.org_archive"
-  "future_keep_eye_on.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12494 796107 998000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/someday_maybe.org"
-  "someday_maybe.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  40011
-  '(22007 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12498 133106 758000) (buffer-file-coding-system . utf-8-emacs-unix) (truncate-lines))
-  '((mark-ring (1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_product.org"
-  "BWD_product.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  665
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12498 804979 834000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/hosting.org_archive"
-  "hosting.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12499 415025 186000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/PARADISE_WARFARE.org"
-  "PARADISE_WARFARE.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  387
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12500 23018 367000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_hurricane.org_archive"
-  "BWD_hurricane.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  27126
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12503 834019 964000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  nil
-  "clock_app_install"
-  'dired-mode
-  '(visual-line-mode yas-minor-mode linum-mode helm-mode)
-  254
-  '(nil nil)
-  t
-  '("/home/haml3t/BWD/Byte/clock_app_install/")
-  '((buffer-display-time 23336 12504 563399 300000) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/FMA.org"
-  "FMA.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  4104
-  '(4344 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12505 392442 612000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/everyday.org"
-  "everyday.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  2616
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12506 17883 127000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/professional.org_archive"
-  "professional.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12506 503148 190000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/refile_DUBSTEP.org_archive"
-  "refile_DUBSTEP.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  549
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12507 92166 253000) (buffer-file-coding-system . binary) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/someday_maybe.org_archive"
-  "someday_maybe.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12507 918525 386000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/self.org_archive"
-  "self.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  125030
-  '(106077 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12513 88182 732000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/social.org"
-  "social.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  139
-  '(38 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12513 978941 673000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (1292))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/Documents/jane_bday_emails_2017.txt"
-  "jane_bday_emails_2017.txt"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(1 nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12514 338306 363000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (1))))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/tutoring.org_archive"
-  "tutoring.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  6648
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12515 187102 263000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  nil
-  "Org Mode - Organize Your Life In Plain Text!_files"
-  'dired-mode
-  '(visual-line-mode yas-minor-mode linum-mode helm-mode)
-  271
-  '(nil nil)
-  t
-  '("/home/haml3t/org/old/Org Mode - Organize Your Life In Plain Text!_files/")
-  '((buffer-display-time 23336 12516 21482 903000) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/games.org"
-  "games.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  41
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12516 572634 542000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_Finance.org"
-  "BWD_Finance.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12517 94702 877000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_IT_passwords.org"
-  "BWD_IT_passwords.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12517 583436 986000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_automation.org"
-  "BWD_automation.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12518 197193 631000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_cutting.org"
-  "BWD_cutting.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12518 716321 166000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_engineering.org"
-  "BWD_engineering.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12519 255032 214000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/Getting Started with Orgzly.org"
-  "Getting Started with Orgzly.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12519 709079 881000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/NYC.org"
-  "NYC.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12520 175060 833000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/dating.org"
-  "dating.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12520 658161 796000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/hosting.org"
-  "hosting.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12521 216104 139000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/martial_arts.org"
-  "martial_arts.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12522 377016 622000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/professional.org"
-  "professional.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12522 990449 974000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/refile_WIZZARD.org"
-  "refile_WIZZARD.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12523 468166 266000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/refile_org.org"
-  "refile_org.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12524 33323 862000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/refile_tablet.org"
-  "refile_tablet.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12524 897668 841000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((truncate-lines))
   '((mark-ring nil)))
 
 (desktop-create-buffer 208
@@ -1166,138 +758,6 @@
   '(nil nil)
   nil
   nil
-  '((buffer-display-time 23336 12525 477643 657000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/803_Condado_del_Mar.org_archive"
-  "803_Condado_del_Mar.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  15049
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12527 50011 992000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/AWESOME.org_archive"
-  "AWESOME.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  4603
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12527 844624 451000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_operations.org_archive"
-  "BWD_operations.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  8305
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12528 671210 112000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_personal.org_archive"
-  "BWD_personal.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  7800
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12529 677846 140000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_personnel.org_archive"
-  "BWD_personnel.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1387
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12530 341522 505000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD_product.org_archive"
-  "BWD_product.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1851
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12531 359390 920000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/FMA.org_archive"
-  "FMA.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  3494
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12532 37448 608000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/cars_driving.org_archive"
-  "cars_driving.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  2129
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23336 12533 427166 620000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/computers.org_archive"
-  "computers.org_archive"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  40996
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23331 62121 441984 742000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/.emacs.d/elpa/org-9.1.13/org-loaddefs.el"
-  "org-loaddefs.el"
-  'emacs-lisp-mode
-  '(visual-line-mode eldoc-mode auto-complete-mode yas-minor-mode autopair-mode linum-mode helm-mode rainbow-delimiters-mode)
-  87610
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23338 32209 157535 254000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/haml3t/org/BWD.org"
-  "BWD.org"
-  'org-mode
-  '(visual-line-mode eldoc-mode yas-minor-mode autopair-mode linum-mode helm-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-display-time 23343 1347 575888 416000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
   '((mark-ring nil)))
 
