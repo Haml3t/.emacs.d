@@ -1,14 +1,61 @@
-;; -*- emacs-lisp -*- <16/05/04 13:09:31 /home/haml3t/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <19/07/18 14:15:00 /home/haml3t/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["ssh" nil "remotehost" nil nil]
-  nil)
- (["ssh" nil "ssh" nil nil]
-  nil)
- (["ssh" "haml3t" "host#4200" nil nil]
-  nil)
- (["ssh" "haml3t" "milesfrankel.xyz" nil nil]
-  nil)
- (["ssh" "haml3t" "host" nil nil]
-  nil))
+((["ssh" "pi" "192.168.0.46" nil nil]
+  ("uname" "Linux 4.14.50+")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/pi")
+  ("file-exists" "test -e")
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1000)
+  ("gid-string" "pi")
+  ("readlink" "\\readlink")
+  ("git" "\\git")
+  ("uid-integer" 1000))
+ (["ssh" "administrator" "192.168.3.84" nil nil]
+  ("uname" "Linux 4.15.0-54-generic")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/administrator")
+  ("file-exists" "test -e")
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1004)
+  ("gid-string" "administrator")
+  ("readlink" "\\readlink")
+  ("git" "\\git")
+  ("env-u-option" t))
+ (["ssh" "administrator" "192.168.3.85" nil nil]
+  ("uname" "Linux 4.15.0-54-generic")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/administrator")
+  ("file-exists" "test -e")
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1004)
+  ("gid-string" "administrator")
+  ("readlink" "\\readlink")
+  ("git" "\\git")
+  ("env-u-option" t)))

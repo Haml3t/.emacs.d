@@ -225,7 +225,7 @@ Ignores CHAR at point."
 
 ;; that wizard's org config
 ;; (load "org-mode.el")
-(load "org5.el")
+(load "org6.el")
 
 
 (defun xah-copy-file-path (&optional φdir-path-only-p)
@@ -266,7 +266,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(custom-enabled-themes (quote (lush)))
  '(custom-safe-themes
    (quote
-    ("0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
+    ("8c757da4837dc5fe6effe9b8d2b8fd27ff1013fc8c22acf069d54b96268b7e96" "0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
  '(debug-on-error t)
  '(jabber-chat-buffer-show-avatar nil)
  '(jabber-roster-line-format "%c %-25n %u %-8s  %S")
@@ -282,10 +282,36 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
       nil)
      ("B" "BWD agenda & all TODOs"
       ((agenda "" nil)
+       (todo "NEXT" nil)
        (alltodo "" nil))
       ((org-agenda-tag-filter-preset
 	(quote
 	 ("+BWD"))))
+      nil)
+     ("W" "WAITING items" todo "WAITING" nil)
+     ("A" "Abel Rosario-Vazquez items"
+      ((tags-todo "AGENDA"
+		  ((org-agenda-overriding-header "Abel agenda items")))
+       (todo "NEXT"
+	     ((org-agenda-overriding-header "NEXT actions with/for Abel")))
+       (todo "WAITING"
+	     ((org-agenda-overriding-header "Abel items I'm waiting on"))))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+Abel_Rosario"))))
+      nil)
+     ("I" "Ivan Nunez items"
+      ((tags-todo "AGENDA"
+		  ((org-agenda-overriding-header "Ivan agenda items")))
+       (todo "NEXT"
+	     ((org-agenda-overriding-header "NEXT actions with/for Ivan")))
+       (todo "WAITING"
+	     ((org-agenda-overriding-header "Ivan items I'm waiting on")))
+       (tags-todo "GOAL+ROOT"
+		  ((org-agenda-overriding-header "Goals committed to with Ivan"))))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+Ivan_Nunez"))))
       nil)
      ("r" "Notes to refile" tags "REFILE" nil)
      ("n" "All next actions for active projects" todo "NEXT"
@@ -295,11 +321,26 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
      ("e" "Effort ranked least to most" todo "NEXT"
       ((org-agenda-sorting-strategy
 	(quote
-	 (effort-up))))))))
- '(org-agenda-files nil)
+	 (effort-up)))))
+     ("P" "Projects" tags-todo "\"-HOLD-CANCELLED/!\""
+      ((org-agenda-overriding-header "Projects")
+       (org-agenda-skip-function
+	(quote bh/skip-non-projects))
+       (org-tags-match-list-sublevels
+	(quote indented))
+       (org-agenda-sorting-strategy
+	(quote
+	 (category-keep)))))
+     ("s" "Stuck Projects" tags-todo "\"-CANCELLED/!\""
+      ((org-agenda-overriding-header "Stuck Projects")
+       (org-agenda-skip-function
+	(quote bh/skip-non-stuck-projects))
+       (org-agenda-sorting-strategy
+	(quote
+	 (category-keep))))))))
  '(org-agenda-include-diary t)
  '(org-agenda-skip-scheduled-if-done t)
- '(org-agenda-start-on-weekday 0)
+ '(org-agenda-start-on-weekday 1)
  '(org-agenda-sticky t)
  '(org-agenda-tags-column -120)
  '(org-agenda-time-grid
