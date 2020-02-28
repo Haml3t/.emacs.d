@@ -266,7 +266,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(custom-enabled-themes (quote (lush)))
  '(custom-safe-themes
    (quote
-    ("8c757da4837dc5fe6effe9b8d2b8fd27ff1013fc8c22acf069d54b96268b7e96" "0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
+    ("d9aa334b2011d57c8ce279e076d6884c951e82ebc347adbe8b7ac03c4b2f3d72" "fa3bdd59ea708164e7821574822ab82a3c51e262d419df941f26d64d015c90ee" "e1ef2d5b8091f4953fe17b4ca3dd143d476c106e221d92ded38614266cea3c8b" "1d50bd38eed63d8de5fcfce37c4bb2f660a02d3dff9cbfd807a309db671ff1af" "e1ecb0536abec692b5a5e845067d75273fe36f24d01210bf0aa5842f2a7e029f" "d5d2ab76985738c142adbe6a35dc51c8d15baf612fdf6745c901856457650314" "07e3a1323eb29844e0de052b05e21e03ae2f55695c11f5d68d61fb5fed722dd2" "7f791f743870983b9bb90c8285e1e0ba1bf1ea6e9c9a02c60335899ba20f3c94" "e074be1c799b509f52870ee596a5977b519f6d269455b84ed998666cf6fc802a" "774aa2e67af37a26625f8b8c86f4557edb0bac5426ae061991a7a1a4b1c7e375" "be9645aaa8c11f76a10bcf36aaf83f54f4587ced1b9b679b55639c87404e2499" "1ed5c8b7478d505a358f578c00b58b430dde379b856fbcb60ed8d345fc95594e" "0ad7f1c71fd0289f7549f0454c9b12005eddf9b76b7ead32a24d9cb1d16cbcbd" "6231254e74298a1cf8a5fee7ca64352943de4b495e615c449e9bb27e2ccae709" "d71aabbbd692b54b6263bfe016607f93553ea214bc1435d17de98894a5c3a086" "3577ee091e1d318c49889574a31175970472f6f182a9789f1a3e9e4513641d86" "bc836bf29eab22d7e5b4c142d201bcce351806b7c1f94955ccafab8ce5b20208" "1c8171893a9a0ce55cb7706766e57707787962e43330d7b0b6b0754ed5283cda" "8c757da4837dc5fe6effe9b8d2b8fd27ff1013fc8c22acf069d54b96268b7e96" "0820d191ae80dcadc1802b3499f84c07a09803f2cb90b343678bdb03d225b26b" "1ba463f6ac329a56b38ae6ac8ca67c8684c060e9a6ba05584c90c4bffc8046c3" default)))
  '(debug-on-error t)
  '(jabber-chat-buffer-show-avatar nil)
  '(jabber-roster-line-format "%c %-25n %u %-8s  %S")
@@ -276,10 +276,12 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(org-agenda-compact-blocks t)
  '(org-agenda-custom-commands
    (quote
-    ((" " "Agenda and all TODOs"
+    (("E" "PErsonal agenda and all TODOs"
       ((agenda "" nil)
        (alltodo "" nil))
-      nil)
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("-BWD")))))
      ("B" "BWD agenda & all TODOs"
       ((agenda "" nil)
        (todo "NEXT" nil)
@@ -288,10 +290,42 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 	(quote
 	 ("+BWD"))))
       nil)
+     (" " "Agenda and all TODOs"
+      ((agenda "" nil)
+       (alltodo "" nil))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("-SOMEDAY/MAYBE")))))
      ("W" "WAITING items" todo "WAITING" nil)
-     ("A" "Abel Rosario-Vazquez items"
-      ((tags-todo "AGENDA"
+     ("p" . "People agendas")
+     ("pA" "Abel Rosario-Vazquez items"
+      ((agenda "" nil)
+       (tags-todo "AGENDA"
 		  ((org-agenda-overriding-header "Abel agenda items")))
+       (tags-todo "\"-HOLD-CANCELLED/!\""
+		  ((org-agenda-overriding-header "Abel assigned/delegated projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-projects))
+		   (org-tags-match-list-sublevels
+		    (quote indented))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (todo "HOLD"
+	     ((org-agenda-overriding-header "Abel project hopper")
+	      (org-agenda-skip-function
+	       (quote bh/skip-non-projects))
+	      (org-tags-match-list-sublevels
+	       (quote indented))))
+       (tags-todo "\"-CANCELLED/!\""
+		  ((org-agenda-overriding-header "Abel stuck projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-stuck-projects))
+		   (org-tags-match-list-sublevels
+		    (quote indented))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
        (todo "NEXT"
 	     ((org-agenda-overriding-header "NEXT actions with/for Abel")))
        (todo "WAITING"
@@ -300,7 +334,43 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 	(quote
 	 ("+Abel_Rosario"))))
       nil)
-     ("I" "Ivan Nunez items"
+     ("pK" "Kary-Liz Maldonado items"
+      ((agenda "" nil)
+       (tags-todo "AGENDA"
+		  ((org-agenda-overriding-header "Kary agenda items")))
+       (tags-todo "\"-HOLD-CANCELLED/!\""
+		  ((org-agenda-overriding-header "Kary assigned/delegated projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-projects))
+		   (org-tags-match-list-sublevels
+		    (quote indented))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (todo "HOLD"
+	     ((org-agenda-overriding-header "Kary project hopper")
+	      (org-agenda-skip-function
+	       (quote bh/skip-non-projects))
+	      (org-tags-match-list-sublevels
+	       (quote indented))))
+       (tags-todo "\"-CANCELLED/!\""
+		  ((org-agenda-overriding-header "Kary stuck projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-stuck-projects))
+		   (org-tags-match-list-sublevels
+		    (quote indented))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (todo "NEXT"
+	     ((org-agenda-overriding-header "NEXT actions with/for Kary")))
+       (todo "WAITING"
+	     ((org-agenda-overriding-header "Kary items I'm waiting on"))))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+KaryLiz_Maldonado"))))
+      nil)
+     ("pI" "Ivan Nunez items"
       ((tags-todo "AGENDA"
 		  ((org-agenda-overriding-header "Ivan agenda items")))
        (todo "NEXT"
@@ -311,9 +381,31 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 		  ((org-agenda-overriding-header "Goals committed to with Ivan"))))
       ((org-agenda-tag-filter-preset
 	(quote
-	 ("+Ivan_Nunez"))))
+	 ("+Ivan_Nunez" "-SOMEDAY_MAYBE"))))
+      nil)
+     ("pa" "Auralis items"
+      ((tags-todo "AGENDA"
+		  ((org-agenda-overriding-header "Auralis agenda items")))
+       (todo "NEXT"
+	     ((org-agenda-overriding-header "NEXT actions with/for Auralis")))
+       (todo "WAITING"
+	     ((org-agenda-overriding-header "Auralis items I'm waiting on")))
+       (tags-todo "GOAL+ROOT"
+		  ((org-agenda-overriding-header "Goals committed to with Auralis"))))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+Auralis_Herrero" "-SOMEDAY_MAYBE"))))
+      nil)
+     ("pm" "My BWD agenda---without delegated tasks/projects"
+      ((agenda "" nil)
+       (todo "NEXT" nil)
+       (alltodo "" nil))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+BWD" "-delegated_project"))))
       nil)
      ("r" "Notes to refile" tags "REFILE" nil)
+     ("d" "Documentation tasks" tags-todo "documentation" nil)
      ("n" "All next actions for active projects" todo "NEXT"
       ((org-agenda-tag-filter-preset
 	(quote
@@ -337,7 +429,16 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 	(quote bh/skip-non-stuck-projects))
        (org-agenda-sorting-strategy
 	(quote
-	 (category-keep))))))))
+	 (category-keep)))))
+     ("S" "Someday/Maybe" tags "TODO=\"SOMEDAY/MAYBE\""
+      ((org-tags-match-list-sublevels
+	(quote indented)))))))
+ '(org-agenda-deadline-faces
+   (quote
+    ((1.0 quote
+	  (:foreground "red"))
+     (0.5 . org-upcoming-deadline)
+     (0.0 . default))))
  '(org-agenda-include-diary t)
  '(org-agenda-skip-scheduled-if-done t)
  '(org-agenda-start-on-weekday 1)
@@ -401,7 +502,7 @@ resourcereport resourceGraph \"\" {
  '(org-use-property-inheritance t)
  '(package-selected-packages
    (quote
-    (org helm-org-rifle fireplace web-mode visual-regexp rsense rainbow-delimiters org-plus-contrib org-journal nodejs-repl neotree matlab-mode markdown-mode magit lush-theme lua-mode jabber iedit ido-hacks ido-gnus helm-bbdb gnus-spotlight gnorb ghci-completion ghc flymake-lua flycheck-hdevtools fish-mode f edit-server cl-generic bbdb-android autopair auto-complete-c-headers auto-complete-auctex auctex ace-window ace-jump-mode)))
+    (avy org-sticky-header doom-themes sqlup-mode org helm-org-rifle fireplace web-mode visual-regexp rsense rainbow-delimiters org-plus-contrib org-journal nodejs-repl neotree matlab-mode markdown-mode magit lush-theme lua-mode jabber iedit ido-hacks ido-gnus helm-bbdb gnus-spotlight gnorb ghci-completion ghc flymake-lua flycheck-hdevtools fish-mode f edit-server cl-generic bbdb-android autopair auto-complete-c-headers auto-complete-auctex auctex ace-window ace-jump-mode)))
  '(send-mail-function (quote smtpmail-send-it)))
 
 
