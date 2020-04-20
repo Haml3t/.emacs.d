@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "bind-key" "bind-key.el" (24124 6983 116237
-;;;;;;  320000))
+;;;### (autoloads nil "bind-key" "bind-key.el" (24221 41259 573536
+;;;;;;  317000))
 ;;; Generated autoloads from bind-key.el
 
 (autoload 'bind-key "bind-key" "\
@@ -46,10 +46,10 @@ Bind multiple keys at once.
 
 Accepts keyword arguments:
 :map MAP               - a keymap into which the keybindings should be
-			 added
+                         added
 :prefix KEY            - prefix key for these bindings
 :prefix-map MAP        - name of the prefix map that should be created
-			 for these bindings
+                         for these bindings
 :prefix-docstring STR  - docstring for the prefix-map variable
 :menu-name NAME        - optional menu string for prefix map
 :filter FORM           - optional form to determine when bindings apply

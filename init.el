@@ -86,7 +86,7 @@
 
 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
 (require 'auto-complete)
@@ -502,7 +502,7 @@ resourcereport resourceGraph \"\" {
  '(org-use-property-inheritance t)
  '(package-selected-packages
    (quote
-    (avy org-sticky-header doom-themes sqlup-mode org helm-org-rifle fireplace web-mode visual-regexp rsense rainbow-delimiters org-plus-contrib org-journal nodejs-repl neotree matlab-mode markdown-mode magit lush-theme lua-mode jabber iedit ido-hacks ido-gnus helm-bbdb gnus-spotlight gnorb ghci-completion ghc flymake-lua flycheck-hdevtools fish-mode f edit-server cl-generic bbdb-android autopair auto-complete-c-headers auto-complete-auctex auctex ace-window ace-jump-mode)))
+    (gnuplot avy org-sticky-header doom-themes sqlup-mode helm-org-rifle fireplace visual-regexp rsense rainbow-delimiters lush-theme jabber iedit ido-hacks ido-gnus helm-bbdb gnus-spotlight gnorb ghci-completion ghc flymake-lua flycheck-hdevtools fish-mode f edit-server cl-generic bbdb-android autopair auto-complete-c-headers auto-complete-auctex auctex ace-window ace-jump-mode)))
  '(send-mail-function (quote smtpmail-send-it)))
 
 
