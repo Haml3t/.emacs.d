@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <20/04/20 15:44:22 /home/haml3t/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <20/07/06 15:39:14 /home/haml3t/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -22,7 +22,7 @@
   ("git" "\\git")
   ("uid-integer" 1000))
  (["ssh" "administrator" "192.168.3.85" nil nil]
-  ("uname" "Linux 4.15.0-54-generic")
+  ("uname" "Linux 4.15.0-88-generic")
   ("locale" "LC_ALL=en_US.utf8")
   ("test" "test")
   ("remote-path"
@@ -38,8 +38,7 @@
   ("gid-integer" 1004)
   ("gid-string" "administrator")
   ("readlink" "\\readlink")
-  ("git" "\\git")
-  ("env-u-option" t))
+  ("git" "\\git"))
  (["ssh" "administrator" "192.168.3.6" nil nil]
   ("uname" "Linux 4.15.0-58-generic")
   ("locale" "LC_ALL=en_US.utf8")
@@ -57,14 +56,13 @@
   ("gid-integer" 1006)
   ("gid-string" "administrator"))
  (["ssh" "administrator" "192.168.3.84" nil nil]
-  ("uname" "Linux 4.15.0-88-generic")
+  ("uname" "Linux 4.15.0-109-generic")
   ("locale" "LC_ALL=en_US.utf8")
   ("test" "test")
   ("remote-path"
    ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
   ("remote-shell" "/bin/sh")
-  ("~" "/home/administrator")
-  ("file-exists" "test -e")
+  ("readlink" "\\readlink")
   ("stat" nil)
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
@@ -72,10 +70,9 @@
   ("id" "/usr/bin/id")
   ("gid-integer" 1004)
   ("gid-string" "administrator")
-  ("readlink" "\\readlink")
+  ("file-exists" "test -e")
   ("git" "\\git")
-  ("env-u-option" t)
-  ("uid-integer" 1000))
+  ("env-u-option" t))
  (["ssh" "pi" "192.168.3.119" nil nil]
   ("uname" "Linux 4.19.75-v7+")
   ("locale" "LC_ALL=en_US.utf8")
