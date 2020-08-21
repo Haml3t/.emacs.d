@@ -296,7 +296,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
        (alltodo "" nil))
       ((org-agenda-tag-filter-preset
 	(quote
-	 ("+BWD"))))
+	 ("+BWD" "-SOMEDAY_MAYBE" "-HOLD" "-CANCELLED"))))
       nil)
      (" " "Agenda and all TODOs"
       ((agenda "" nil)
@@ -389,7 +389,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 		  ((org-agenda-overriding-header "Goals committed to with Ivan"))))
       ((org-agenda-tag-filter-preset
 	(quote
-	 ("+Ivan_Nunez" "-SOMEDAY_MAYBE"))))
+	 ("+Ivan_Nunez" "-SOMEDAY_MAYBE" "-HOLD" "-CANCELLED"))))
       nil)
      ("pa" "Auralis items"
       ((tags-todo "AGENDA"
@@ -440,7 +440,12 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 	 (category-keep)))))
      ("S" "Someday/Maybe" tags "TODO=\"SOMEDAY/MAYBE\""
       ((org-tags-match-list-sublevels
-	(quote indented)))))))
+	(quote indented))))
+     ("mm" "Weekly management meeting" todo ""
+      ((org-agenda-overriding-header "Weekly Management Meeting Agenda Items")
+       (org-agenda-tag-filter-preset
+	(quote
+	 ("+@weekly_management_meeting" "+AGENDA"))))))))
  '(org-agenda-deadline-faces
    (quote
     ((1.0 quote
