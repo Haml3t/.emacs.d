@@ -283,6 +283,8 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
     (("E" "PErsonal agenda and all TODOs"
       ((tags "HEADLINE+ACTIVE"
 	     ((org-agenda-overriding-header "")))
+       (tags-todo "GOAL+monthly"
+		  ((org-agenda-overriding-header "Goals this month")))
        (agenda "" nil)
        (alltodo "" nil))
       ((org-agenda-tag-filter-preset

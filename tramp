@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <20/08/28 15:45:22 /home/haml3t/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <20/09/10 14:42:21 /home/haml3t/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -73,7 +73,8 @@
   ("gid-string" "administrator")
   ("readlink" "\\readlink")
   ("git" "\\git")
-  ("env-u-option" t))
+  ("env-u-option" t)
+  ("uid-integer" 1000))
  (["ssh" "pi" "192.168.3.119" nil nil]
   ("uname" "Linux 4.19.75-v7+")
   ("locale" "LC_ALL=en_US.utf8")
