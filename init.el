@@ -280,7 +280,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
  '(org-agenda-compact-blocks t)
  '(org-agenda-custom-commands
    (quote
-    (("E" "PErsonal agenda and all TODOs"
+    (("E" "pErsonal agenda and all TODOs"
       ((tags "HEADLINE+ACTIVE"
 	     ((org-agenda-overriding-header "")))
        (tags-todo "GOAL+monthly"
@@ -299,6 +299,16 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
       ((org-agenda-tag-filter-preset
 	(quote
 	 ("+BWD" "-SOMEDAY_MAYBE" "-HOLD" "-CANCELLED"))))
+      nil)
+     ("N" "Nanowear agenda & all TODOs"
+      ((tags "HEADLINE+ACTIVE"
+	     ((org-agenda-overriding-header "")))
+       (agenda "" nil)
+       (todo "NEXT" nil)
+       (alltodo "" nil))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+Nanowear" "-SOMEDAY_MAYBE" "-HOLD" "-CANCELLED"))))
       nil)
      (" " "Agenda and all TODOs"
       ((agenda "" nil)
@@ -322,7 +332,7 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 		    (quote
 		     (category-keep)))))
        (todo "HOLD"
-	     ((org-agenda-overriding-header "Abel project hopper")
+	     ((org-agenda-overriding-header "Adriel project hopper")
 	      (org-agenda-skip-function
 	       (quote bh/skip-non-projects))
 	      (org-tags-match-list-sublevels
@@ -337,14 +347,14 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 		    (quote
 		     (category-keep)))))
        (todo "NEXT"
-	     ((org-agenda-overriding-header "NEXT actions with/for Abel")))
+	     ((org-agenda-overriding-header "NEXT actions with/for Adriel")))
        (todo "WAITING"
-	     ((org-agenda-overriding-header "Abel items I'm waiting on"))))
+	     ((org-agenda-overriding-header "Adriel items I'm waiting on"))))
       ((org-agenda-tag-filter-preset
 	(quote
 	 ("+Adriel_Hernandez"))))
       nil)
-     ("pK" "Kary-Liz Maldonado items"
+     ("pk" "Kary-Liz Maldonado items"
       ((agenda "" nil)
        (tags-todo "AGENDA"
 		  ((org-agenda-overriding-header "Kary agenda items")))
@@ -406,6 +416,78 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 	(quote
 	 ("+Auralis_Herrero" "-SOMEDAY_MAYBE"))))
       nil)
+     ("pi" "Itza Feliciano items"
+      ((agenda "" nil)
+       (tags-todo "AGENDA"
+		  ((org-agenda-overriding-header "Itza agenda items")))
+       (tags-todo "\"-HOLD-CANCELLED/!\""
+		  ((org-agenda-overriding-header "Itza assigned/delegated projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-projects))
+		   (org-tags-match-list-sublevels
+		    (quote indented))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (todo "HOLD"
+	     ((org-agenda-overriding-header "Itza project hopper")
+	      (org-agenda-skip-function
+	       (quote bh/skip-non-projects))
+	      (org-tags-match-list-sublevels
+	       (quote indented))))
+       (tags-todo "\"-CANCELLED/!\""
+		  ((org-agenda-overriding-header "Itza stuck projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-stuck-projects))
+		   (org-tags-match-list-sublevels
+		    (quote indented))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (todo "NEXT"
+	     ((org-agenda-overriding-header "NEXT actions with/for Itza")))
+       (todo "WAITING"
+	     ((org-agenda-overriding-header "Itza items I'm waiting on"))))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+Itza_Feliciano"))))
+      nil)
+     ("pK" "KK Oliver items"
+      ((agenda "" nil)
+       (tags-todo "AGENDA"
+		  ((org-agenda-overriding-header "KK agenda items")))
+       (tags-todo "\"-HOLD-CANCELLED/!\""
+		  ((org-agenda-overriding-header "KK assigned/delegated projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-projects))
+		   (org-tags-match-list-sublevels
+		    (quote indented))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (todo "HOLD"
+	     ((org-agenda-overriding-header "KK project hopper")
+	      (org-agenda-skip-function
+	       (quote bh/skip-non-projects))
+	      (org-tags-match-list-sublevels
+	       (quote indented))))
+       (tags-todo "\"-CANCELLED/!\""
+		  ((org-agenda-overriding-header "KK stuck projects")
+		   (org-agenda-skip-function
+		    (quote bh/skip-non-stuck-projects))
+		   (org-tags-match-list-sublevels
+		    (quote indented))
+		   (org-agenda-sorting-strategy
+		    (quote
+		     (category-keep)))))
+       (todo "NEXT"
+	     ((org-agenda-overriding-header "NEXT actions with/for KK")))
+       (todo "WAITING"
+	     ((org-agenda-overriding-header "KK items I'm waiting on"))))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+KK_Oliver"))))
+      nil)
      ("pm" "My BWD agenda---without delegated tasks/projects"
       ((agenda "" nil)
        (todo "NEXT" nil)
@@ -443,11 +525,17 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
      ("S" "Someday/Maybe" tags "TODO=\"SOMEDAY/MAYBE\""
       ((org-tags-match-list-sublevels
 	(quote indented))))
+     ("m" . "Meeting agendas")
      ("mm" "Weekly management meeting" todo ""
       ((org-agenda-overriding-header "Weekly Management Meeting Agenda Items")
        (org-agenda-tag-filter-preset
 	(quote
-	 ("+@weekly_management_meeting" "+AGENDA"))))))))
+	 ("+weekly_management_meeting" "+AGENDA")))))
+     ("mn" "Weekly Nanowear call" todo ""
+      ((org-agenda-overriding-header "Weekly Nanowear Agenda Items")
+       (org-agenda-tag-filter-preset
+	(quote
+	 ("+weekly_Nanowear_call" "+AGENDA"))))))))
  '(org-agenda-deadline-faces
    (quote
     ((1.0 quote

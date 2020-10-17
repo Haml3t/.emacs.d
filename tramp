@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <20/09/10 14:42:21 /home/haml3t/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <20/10/12 11:52:30 /home/haml3t/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -56,25 +56,24 @@
   ("gid-integer" 1006)
   ("gid-string" "administrator"))
  (["ssh" "administrator" "192.168.3.84" nil nil]
-  ("uname" "Linux 4.15.0-112-generic")
+  ("uname" "Linux 4.15.0-118-generic")
   ("locale" "LC_ALL=en_US.utf8")
   ("test" "test")
   ("remote-path"
    ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
   ("remote-shell" "/bin/sh")
-  ("~" "/home/administrator")
   ("file-exists" "test -e")
   ("stat" nil)
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
   ("perl" "\\perl")
   ("id" "/usr/bin/id")
-  ("gid-integer" 1004)
   ("gid-string" "administrator")
+  ("gid-integer" 1004)
   ("readlink" "\\readlink")
-  ("git" "\\git")
   ("env-u-option" t)
-  ("uid-integer" 1000))
+  ("~" "/home/administrator")
+  ("git" "\\git"))
  (["ssh" "pi" "192.168.3.119" nil nil]
   ("uname" "Linux 4.19.75-v7+")
   ("locale" "LC_ALL=en_US.utf8")
