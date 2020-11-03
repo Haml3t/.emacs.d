@@ -35,6 +35,10 @@
 (setq org-env-dir (getenv "ORG"))
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
+;; automatically update open buffers when changed on disk (from org edits & sync on phone or other computer)
+(global-auto-revert-mode t)
+(setq auto-revert-use-notify nil)		;automatically scan for changes every 5 seconds instead of relying on OS notifications
+
 (column-number-mode)
 
 (desktop-save-mode t)
@@ -310,6 +314,16 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
 	(quote
 	 ("+Nanowear" "-SOMEDAY_MAYBE" "-HOLD" "-CANCELLED"))))
       nil)
+     ("A" "ARM agenda & all TODOs"
+      ((tags "HEADLINE+ACTIVE"
+	     ((org-agenda-overriding-header "")))
+       (agenda "" nil)
+       (todo "NEXT" nil)
+       (alltodo "" nil))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+ARM" "-SOMEDAY_MAYBE" "-HOLD" "-CANCELLED"))))
+      nil)
      (" " "Agenda and all TODOs"
       ((agenda "" nil)
        (alltodo "" nil))
@@ -535,7 +549,9 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
       ((org-agenda-overriding-header "Weekly Nanowear Agenda Items")
        (org-agenda-tag-filter-preset
 	(quote
-	 ("+weekly_Nanowear_call" "+AGENDA"))))))))
+	 ("+weekly_Nanowear_call" "+AGENDA")))))
+     ("g" . "Goals/committed projects")
+     ("gI" "ISO quarterly meeting goals" tags "+ISO_quarterly_project" nil))))
  '(org-agenda-deadline-faces
    (quote
     ((1.0 quote
