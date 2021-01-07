@@ -1,0 +1,7 @@
+<!-- BEGIN: \bibtexkey -->
+\begin{author}
+\format[FormatChars,AuthorLastFirstCommas]{\author}. \end{author}\begin{title}"\format[FormatChars,XMLChars]{\title}." \end{title}PhD diss., \format[FormatChars,XMLChars]{\school},
+\begin{year}\format[FormatChars,XMLChars]{\year}. \end{year}
+\begin{note}<text:line-break/><text:line-break/>
+\format[FormatChars,XMLChars, Replace("\n,<text:line-break/><text:line-break/>")]{\note} \end{note}
+<!-- END: \bibtexkey -->

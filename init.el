@@ -25,6 +25,7 @@
 ;; load org elpa
 (require 'package)
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+(add-to-list 'package-archives '("ox-odt" . "https://kjambunathan.github.io/elpa/") t)
 ;; load taskjuggler export
 (require 'ox-taskjuggler)
 ;; load org-depend
@@ -330,6 +331,16 @@ URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'"
       ((org-agenda-tag-filter-preset
 	(quote
 	 ("-SOMEDAY/MAYBE")))))
+     ("x" "Christmas break 2020-2021 agenda and all TODOs"
+      ((tags "HEADLINE+ACTIVE"
+	     ((org-agenda-overriding-header "Reminders")))
+       (agenda "" nil)
+       (todo "NEXT" nil)
+       (alltodo "" nil))
+      ((org-agenda-tag-filter-preset
+	(quote
+	 ("+xmas_break_2020_2021"))))
+      nil)
      ("W" "WAITING items" todo "WAITING" nil)
      ("p" . "People agendas")
      ("pA" "Adriel Hernandez items"
@@ -621,7 +632,7 @@ resourcereport resourceGraph \"\" {
  '(org-use-property-inheritance t)
  '(package-selected-packages
    (quote
-    (gnuplot avy org-sticky-header doom-themes sqlup-mode helm-org-rifle fireplace visual-regexp rsense rainbow-delimiters lush-theme jabber iedit ido-hacks ido-gnus helm-bbdb gnus-spotlight gnorb ghci-completion ghc flymake-lua flycheck-hdevtools fish-mode f edit-server cl-generic bbdb-android autopair auto-complete-c-headers auto-complete-auctex auctex ace-window ace-jump-mode)))
+    (ox-odt ox-minutes gnuplot avy org-sticky-header doom-themes sqlup-mode helm-org-rifle fireplace visual-regexp rsense rainbow-delimiters lush-theme jabber iedit ido-hacks ido-gnus helm-bbdb gnus-spotlight gnorb ghci-completion ghc flymake-lua flycheck-hdevtools fish-mode f edit-server cl-generic bbdb-android autopair auto-complete-c-headers auto-complete-auctex auctex ace-window ace-jump-mode)))
  '(send-mail-function (quote smtpmail-send-it)))
 
 
